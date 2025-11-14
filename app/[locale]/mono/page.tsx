@@ -1,0 +1,182 @@
+import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
+
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
+export default async function MonoPage({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  // Explicitly pass locale and namespace to ensure correct language is used
+  const t = await getTranslations({ locale, namespace: 'mono' });
+  
+  const specs = [
+    { label: t('specs.finish'), value: t('specs.finishValue') },
+    { label: t('specs.leadTime'), value: t('specs.leadTimeValue') },
+    { label: t('specs.sizes'), value: t('specs.sizesValue') },
+    { label: t('specs.use'), value: t('specs.useValue') },
+  ];
+
+  const materialCards = [
+    {
+      title: t('material.title'),
+      copy: t('material.description'),
+    },
+    {
+      title: t('finish.title'),
+      copy: t('finish.description'),
+    },
+    {
+      title: t('care.title'),
+      copy: t('care.description'),
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background pt-16 text-foreground">
+      {/* Hero */}
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
+        <div className="flex flex-col md:flex-row items-stretch gap-10 md:gap-14">
+          <div className="md:w-5/12 flex flex-col justify-between h-full">
+            <div className="space-y-8 md:space-y-12">
+
+              <h1
+                className="text-5xl md:text-7xl leading-tight"
+                style={{ fontFamily: "var(--font-bebas-neue)" }}
+              >
+                {t('title')}
+              </h1>
+              <p
+                className="text-base md:text-lg text-foreground/70"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {t('description')}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 text-center text-xs uppercase tracking-wide mt-auto pt-8 md:pt-12">
+              {specs.map((item) => (
+                <div
+                  key={item.label}
+                  className="border border-foreground/10 py-4"
+                  style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+                >
+                  <p className="text-foreground/50 mb-1">{item.label}</p>
+                  <p className="text-sm text-foreground/90 normal-case">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="md:flex-1 relative w-full aspect-[3/4] rounded-sm overflow-hidden">
+            <Image
+              src="/mono-2.png"
+              alt="Mono hero table"
+              fill
+              className="object-contain"
+              priority
+              sizes="(min-width: 1024px) 55vw, 100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Material Story */}
+      <section className="bg-[var(--color-grey)]/6 border-t border-b border-foreground/10">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-3 gap-6">
+          {materialCards.map((card) => (
+            <div
+              key={card.title}
+              className="bg-background/70 border border-foreground/10 rounded-sm p-6 flex flex-col gap-3"
+            >
+              <p
+                className="text-xs uppercase tracking-[0.2em] text-foreground/50"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {card.title}
+              </p>
+              <p
+                className="text-base text-foreground/80 leading-relaxed"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {card.copy}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Gallery + Details */}
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 space-y-10 md:space-y-14">
+        <div className="grid md:grid-cols-5 gap-8">
+          <div className="md:col-span-2 space-y-5">
+            <p
+              className="text-sm uppercase tracking-[0.2em] text-foreground/50"
+              style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+            >
+              {t('whyMono')}
+            </p>
+            <p
+              className="text-lg md:text-xl text-foreground/80 leading-relaxed"
+              style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+            >
+              {t('whyMonoDescription')}
+            </p>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="border-t border-foreground/20 pt-4">
+                <p className="text-foreground/60 mb-1">{t('specs.palette')}</p>
+                <p style={{ fontFamily: "var(--font-ibm-plex-mono)" }}>
+                  {t('specs.paletteValue')}
+                </p>
+              </div>
+              <div className="border-t border-foreground/20 pt-4">
+                <p className="text-foreground/60 mb-1">{t('specs.heightOptions')}</p>
+                <p style={{ fontFamily: "var(--font-ibm-plex-mono)" }}>
+                  {t('specs.heightOptionsValue')}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-3 grid grid-cols-1 gap-6">
+            <div className="relative w-full aspect-[6/3] rounded-sm overflow-hidden border border-foreground/10">
+              <Image
+                src="/mono-1.png"
+                alt="Mono styling 1"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 60vw, 100vw"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
+                <Image
+                  src="/mono-4.png"
+                  alt="Mono styling detail"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                />
+              </div>
+              <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
+                <Image
+                  src="/mono-5.png"
+                  alt="Mono tabletop closeup"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+

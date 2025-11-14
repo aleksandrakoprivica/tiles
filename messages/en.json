@@ -1,0 +1,44 @@
+{
+  "common": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "contact": "CONTACT"
+  },
+  "main": {
+
+  },
+  "mono": {
+    "title": "Mono Collection",
+    "series": "Mono Series",
+    "description": "Mono Collection brings pure minimalism through tables crafted from the big format tiles. Simple lines and calming textures create a piece that fits effortlessly into any space, while the hand-finished details add warmth and authenticity.",
+    "whyMono": "Why Mono",
+    "whyMonoDescription": "Designed for modular living—pair two together for a layered coffee table moment or let a single piece anchor an entryway. Neutral palettes keep the focus on texture and proportion.",
+    "specs": {
+      "finish": "Finish",
+      "finishValue": "Matte + High Gloss",
+      "leadTime": "Lead time",
+      "leadTimeValue": "4-6 weeks",
+      "sizes": "Sizes",
+      "sizesValue": "24\" - 54\"",
+      "use": "Use",
+      "useValue": "Indoor / Covered outdoor",
+      "palette": "Palette",
+      "paletteValue": "Clay, Salt, Char",
+      "heightOptions": "Height Options",
+      "heightOptionsValue": "14\" / 18\""
+    },
+    "material": {
+      "title": "Material",
+      "description": "Hand-poured composite with marble fragments for a mineral feel that stays cool to the touch."
+    },
+    "finish": {
+      "title": "Finish",
+      "description": "Soft radius edges with a low-sheen sealant that resists stains without muting the speckled detail."
+    },
+    "care": {
+      "title": "Care",
+      "description": "Wipe with a damp cloth, spot clean with neutral soap. No special kits, no fussy upkeep."
+    }
+  }
+}
+

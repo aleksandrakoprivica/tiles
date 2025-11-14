@@ -1,7 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
+export default async function Home({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations(); // Call it inside the component, not at module level
+  
   return (
     <>
     <div className="flex min-h-screen bg-background">
@@ -67,7 +78,7 @@ export default function Home() {
       {/* 3 Column Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full">
         {/* Column 1 - Mono */}
-        <Link href="/mono" className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
+        <Link href={`/${locale}/mono`} className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
           <Image
             src="/mono-group.png"
             alt="Mono tile group"
@@ -78,7 +89,7 @@ export default function Home() {
         </Link>
 
         {/* Column 2 - Mosaic */}
-        <Link href="/mosaic" className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
+        <Link href={`/${locale}/mosaic`} className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
           <Image
             src="/mosaicc-group.png"
             alt="Mosaic tile group"
@@ -89,7 +100,7 @@ export default function Home() {
         </Link>
 
         {/* Column 3 - Mirror */}
-        <Link href="/mirror" className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
+        <Link href={`/${locale}/mirror`} className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
           <Image
             src="/mirror-group.png"
             alt="Mirror tile group"

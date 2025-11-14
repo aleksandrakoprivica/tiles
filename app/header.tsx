@@ -4,30 +4,29 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
 import { useState } from 'react';
-
-interface NavItem {
-  label: string;
-  href: string;
-}
-
-const navItems: NavItem[] = [
-  {
-    label: 'home',
-    href: '/',
-  },
-  {
-    label: 'about',
-    href: '/about',
-  },
-  {
-    label: 'contact',
-    href: '/contact',
-  },
-];
+import { useTranslations, useLocale } from 'next-intl';
+import { locales } from '../i18n';
 
 export function Header() {
+  const t = useTranslations('common');
+  const locale = useLocale();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    {
+      label: t('home'),
+      href: `/${locale}`,
+    },
+    {
+      label: t('about'),
+      href: `/${locale}/about`,
+    },
+    {
+      label: t('contact'),
+      href: `/${locale}/contact`,
+    },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-foreground/10">
@@ -74,12 +73,12 @@ export function Header() {
 
           {/* Logo */}
           <Link 
-            href="/" 
+            href={`/${locale}`}
             className="ml-auto -mr-1 md:mr-0 md:ml-0 md:col-span-3 xl:col-span-2 flex items-center md:justify-start" 
             prefetch
           >
             <Image 
-              src="/logotiles.png" 
+              src="/logo-tiles.png"
               alt="logo" 
               width={250} 
               height={120}
@@ -104,6 +103,23 @@ export function Header() {
                   </Link>
                 </li>
               ))}
+              {/* Language Switcher */}
+              <li className="flex gap-2 ml-4">
+                {locales.map((loc) => (
+                  <Link
+                    key={loc}
+                    href={pathname.replace(`/${locale}`, `/${loc}`)}
+                    className={`text-sm uppercase px-2 py-1 rounded transition-colors ${
+                      locale === loc 
+                        ? 'text-foreground font-semibold' 
+                        : 'text-foreground/50 hover:text-foreground/70'
+                    }`}
+                    style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                  >
+                    {loc.toUpperCase()}
+                  </Link>
+                ))}
+              </li>
             </ul>
           </nav>
         </div>
@@ -128,6 +144,24 @@ export function Header() {
                     </Link>
                   </li>
                 ))}
+                {/* Mobile Language Switcher */}
+                <li className="flex gap-2 pt-2 border-t border-foreground/10">
+                  {locales.map((loc) => (
+                    <Link
+                      key={loc}
+                      href={pathname.replace(`/${locale}`, `/${loc}`)}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`text-sm uppercase px-3 py-2 rounded transition-colors ${
+                        locale === loc 
+                          ? 'text-foreground font-semibold bg-foreground/10' 
+                          : 'text-foreground/50 hover:text-foreground/70'
+                      }`}
+                      style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                    >
+                      {loc.toUpperCase()}
+                    </Link>
+                  ))}
+                </li>
               </ul>
             </nav>
           </div>

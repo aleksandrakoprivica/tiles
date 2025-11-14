@@ -1,0 +1,40 @@
+{
+  "common": {
+    "home": "POČETNA",
+    "about": "O NAMA",
+    "contact": "KONTAKT"
+  },
+  "mono": {
+    "title": "Mono Kolekcija",
+    "description": "Mono kolekcija donosi čist minimalizam kroz stolove izrađene od pločica velikog formata. Jednostavne linije i smirene teksture stvaraju komad koji se lako uklapa u svaki prostor, dok ručna izrada daje toplinu i autentičnost. ",
+    "whyMono": "Zašto Mono",
+    "whyMonoDescription": "Vaš MONO sto postaje fokus koji definiše ulaz, dnevni boravak ili radni kutak. Zemljani tonovi smiruju prostor, a verzije u boji daju mu novo raspoloženje — od blagih naglasaka do dramatičnih, galerijskih efekata.",
+    "specs": {
+      "finish": "Završna obrada",
+      "finishValue": "Mat + Visoki sjaj",
+      "leadTime": "Rok isporuke",
+      "leadTimeValue": "4-6 nedelja",
+      "sizes": "Veličine",
+      "sizesValue": "24\" - 54\"",
+      "use": "Upotreba",
+      "useValue": "Unutrašnje / Pokriveno spoljašnje",
+      "palette": "Paleta",
+      "paletteValue": "Glinica, So, Ugalj",
+      "heightOptions": "Opcije visine",
+      "heightOptionsValue": "14\" / 18\""
+    },
+    "material": {
+      "title": "Materijal",
+      "description": "Koristimo širok spektar pločica: keramičke, mermerne, teraco i kompozitne. Svaka nudi drugačiji karakter i taktilnost, pa se sto lako prilagođava stilu i atmosferi prostora."
+    },
+    "finish": {
+      "title": "Završna obrada",
+      "description": "Završna obrada može biti mat, polusjajna ili sjajna, u zavisnosti od materijala i željenog izgleda. Ivice su pažljivo oblikovane — bilo meko zaobljene ili precizno ravne — sa zaštitnim slojem koji štiti površinu od mrlja i zadržava prirodnu teksturu pločice."
+    },
+    "care": {
+      "title": "Nega",
+      "description": "Jednostavna nega koja prati jednostavan dizajn: vlažna krpa za redovno čišćenje i blago sredstvo za mrlje. Površina se lako održava i ne zahteva posebne proizvode."
+    }
+  }
+}
+
