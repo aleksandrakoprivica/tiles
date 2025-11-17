@@ -1,95 +1,37 @@
 import Image from "next/image";
-import Link from "next/link";
-import { getTranslations } from 'next-intl/server';
 
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
-
-export default async function MonoPage({
-  params
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  // Explicitly pass locale and namespace to ensure correct language is used
-  const t = await getTranslations({ locale, namespace: 'mono' });
-  const common = await getTranslations({ locale, namespace: 'common' });
-  
-  const specs = [
-    { label: t('specs.finish'), value: t('specs.finishValue') },
-    { label: t('specs.leadTime'), value: t('specs.leadTimeValue') },
-    { label: t('specs.sizes'), value: t('specs.sizesValue') },
-    { label: t('specs.use'), value: t('specs.useValue') },
-  ];
-
-  const materialCards = [
-    {
-      title: t('material.title'),
-      copy: t('material.description'),
-    },
-    {
-      title: t('finish.title'),
-      copy: t('finish.description'),
-    },
-    {
-      title: t('care.title'),
-      copy: t('care.description'),
-    },
-  ];
-
+export default function MonoPage() {
   return (
     <div className="min-h-screen bg-background pt-16 text-foreground">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 pt-6">
-        <Link
-          href={`/${locale}`}
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground/60 hover:text-foreground transition-colors"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-        >
-          <svg
-            className="w-3 h-3"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4.5 2L1 6L4.5 10"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M1 6H11"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-          {common('backHome')}
-        </Link>
-      </div>
-
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="flex flex-col md:flex-row items-stretch gap-10 md:gap-14">
           <div className="md:w-5/12 flex flex-col justify-between h-full">
             <div className="space-y-8 md:space-y-12">
+
               <h1
                 className="text-5xl md:text-7xl leading-tight"
                 style={{ fontFamily: "var(--font-bebas-neue)" }}
               >
-                {t('title')}
+                Mono Collection
               </h1>
               <p
                 className="text-base md:text-lg text-foreground/70"
                 style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
               >
-                {t('description')}
+                Minimal silhouettes, generous proportions, and terrazzo-inspired
+                surfaces built for everyday rituals. Each piece is poured, polished,
+                and sealed by hand for a refined finish that still feels grounded.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 text-center text-xs uppercase tracking-wide mt-auto pt-8 md:pt-12">
-              {specs.map((item) => (
+              {[
+                { label: "Finish", value: "Matte + High Gloss" },
+                { label: "Lead time", value: "4-6 weeks" },
+                { label: "Sizes", value: "24\" - 54\"" },
+                { label: "Use", value: "Indoor / Covered outdoor" },
+              ].map((item) => (
                 <div
                   key={item.label}
                   className="border border-foreground/10 py-4"
@@ -120,7 +62,23 @@ export default async function MonoPage({
       {/* Material Story */}
       <section className="bg-[var(--color-grey)]/6 border-t border-b border-foreground/10">
         <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-3 gap-6">
-          {materialCards.map((card) => (
+          {[
+            {
+              title: "Material",
+              copy:
+                "Hand-poured composite with marble fragments for a mineral feel that stays cool to the touch.",
+            },
+            {
+              title: "Finish",
+              copy:
+                "Soft radius edges with a low-sheen sealant that resists stains without muting the speckled detail.",
+            },
+            {
+              title: "Care",
+              copy:
+                "Wipe with a damp cloth, spot clean with neutral soap. No special kits, no fussy upkeep.",
+            },
+          ].map((card) => (
             <div
               key={card.title}
               className="bg-background/70 border border-foreground/10 rounded-sm p-6 flex flex-col gap-3"
@@ -150,22 +108,29 @@ export default async function MonoPage({
               className="text-sm uppercase tracking-[0.2em] text-foreground/50"
               style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
             >
-              {t('whyMono')}
+              Why Mono
             </p>
             <p
               className="text-lg md:text-xl text-foreground/80 leading-relaxed"
               style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
             >
-              {t('whyMonoDescription')}
+              Designed for modular living—pair two together for a layered coffee
+              table moment or let a single piece anchor an entryway. Neutral
+              palettes keep the focus on texture and proportion.
             </p>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="border-t border-foreground/20 pt-4">
-                <p className="text-foreground/60 mb-1">{t('specs.palette')}</p>
+                <p className="text-foreground/60 mb-1">Palette</p>
                 <p style={{ fontFamily: "var(--font-ibm-plex-mono)" }}>
-                  {t('specs.paletteValue')}
+                  Clay, Salt, Char
                 </p>
               </div>
-
+              <div className="border-t border-foreground/20 pt-4">
+                <p className="text-foreground/60 mb-1">Height Options</p>
+                <p style={{ fontFamily: "var(--font-ibm-plex-mono)" }}>
+                  14&quot; / 18&quot;
+                </p>
+              </div>
             </div>
           </div>
 

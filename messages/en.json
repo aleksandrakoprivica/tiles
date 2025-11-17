@@ -2,7 +2,8 @@
   "common": {
     "home": "HOME",
     "about": "ABOUT",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "backHome": "Back to home"
   },
   "main": {
 
@@ -19,13 +20,12 @@
       "leadTime": "Lead time",
       "leadTimeValue": "4-6 weeks",
       "sizes": "Sizes",
-      "sizesValue": "24\" - 54\"",
+      "sizesValue": "60cm - 140cm",
       "use": "Use",
-      "useValue": "Indoor / Covered outdoor",
+      "useValue": "Indoor / Outdoor",
       "palette": "Palette",
-      "paletteValue": "Clay, Salt, Char",
-      "heightOptions": "Height Options",
-      "heightOptionsValue": "14\" / 18\""
+      "paletteValue": "Marbel, Terazzo, Travertine "
+
     },
     "material": {
       "title": "Material",
@@ -39,6 +39,14 @@
       "title": "Care",
       "description": "Wipe with a damp cloth, spot clean with neutral soap. No special kits, no fussy upkeep."
     }
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "collections": "Collections"
+
   }
 }
 

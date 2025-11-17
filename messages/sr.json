@@ -2,7 +2,8 @@
   "common": {
     "home": "POČETNA",
     "about": "O NAMA",
-    "contact": "KONTAKT"
+    "contact": "KONTAKT",
+    "backHome": "Nazad na početnu"
   },
   "mono": {
     "title": "Mono Kolekcija",
@@ -15,13 +16,12 @@
       "leadTime": "Rok isporuke",
       "leadTimeValue": "4-6 nedelja",
       "sizes": "Veličine",
-      "sizesValue": "24\" - 54\"",
+      "sizesValue": "60cm - 140cm",
       "use": "Upotreba",
-      "useValue": "Unutrašnje / Pokriveno spoljašnje",
+      "useValue": "Unutrašnja / Spoljašnja",
       "palette": "Paleta",
-      "paletteValue": "Glinica, So, Ugalj",
-      "heightOptions": "Opcije visine",
-      "heightOptionsValue": "14\" / 18\""
+      "paletteValue": "Mermer, Terazzo, Travertin"
+
     },
     "material": {
       "title": "Materijal",
@@ -35,6 +35,14 @@
       "title": "Nega",
       "description": "Jednostavna nega koja prati jednostavan dizajn: vlažna krpa za redovno čišćenje i blago sredstvo za mrlje. Površina se lako održava i ne zahteva posebne proizvode."
     }
+  },
+  "footer": {
+    "navigation": "Navigacija",
+    "home": "Početna",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "collections": "Kolekcije"
+
   }
 }
 

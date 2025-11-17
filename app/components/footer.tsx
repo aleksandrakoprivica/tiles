@@ -1,6 +1,18 @@
+'use client';
+
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 export function Footer() {
+  const t = useTranslations('footer');
+  const locale = useLocale();
+
+  const localizedHref = (path: string = '') => {
+    const basePath = `/${locale}`;
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+    return path ? `${basePath}${normalizedPath}` : basePath;
+  };
+
   return (
     <footer className="border-t border-foreground/10 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
@@ -17,7 +29,7 @@ export function Footer() {
               className="text-foreground/60 text-sm leading-relaxed"
               style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
             >
-              Tile it your way. Custom designs for every space.
+              Tile it your way.
             </p>
           </div>
 
@@ -27,34 +39,34 @@ export function Footer() {
               className="text-sm font-semibold uppercase tracking-wider text-foreground/70 mb-4"
               style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
             >
-              Navigation
+              {t('navigation')}
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link 
-                  href="/" 
+                  href={localizedHref()}
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                   style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                 >
-                  Home
+                  {t('home')}
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="/about" 
+                  href={localizedHref('/about')} 
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                   style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                 >
-                  About
+                  {t('about')}
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="/contact" 
+                  href={localizedHref('/contact')} 
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                   style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                 >
-                  Contact
+                  {t('contact')}
                 </Link>
               </li>
             </ul>
@@ -66,12 +78,12 @@ export function Footer() {
               className="text-sm font-semibold uppercase tracking-wider text-foreground/70 mb-4"
               style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
             >
-              Collections
+              {t('collections')}
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link 
-                  href="/mono" 
+                  href={localizedHref('/mono')} 
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                   style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                 >
@@ -80,7 +92,7 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/mosaic" 
+                  href={localizedHref('/mosaic')} 
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                   style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                 >
@@ -89,7 +101,7 @@ export function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/mirror" 
+                  href={localizedHref('/mirror')} 
                   className="text-foreground/60 hover:text-foreground transition-colors text-sm"
                   style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                 >
