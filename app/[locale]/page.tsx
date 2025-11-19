@@ -11,7 +11,9 @@ export default async function Home({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations(); // Call it inside the component, not at module level
+  const mono = await getTranslations({ locale, namespace: 'mono' });
+  const mosaic = await getTranslations({ locale, namespace: 'mosaic' });
+  const mirror = await getTranslations({ locale, namespace: 'mirror' });
   
   return (
     <>
@@ -78,36 +80,69 @@ export default async function Home({
       {/* 3 Column Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full">
         {/* Column 1 - Mono */}
-        <Link href={`/${locale}/mono`} className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
+        <Link 
+          href={`/${locale}/mono`} 
+          className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+        >
           <Image
             src="/mono-group.png"
             alt="Mono tile group"
             fill
-            className="object-contain"
+            className="object-contain group-hover:opacity-50 transition-opacity duration-300"
             sizes="(min-width: 768px) 33vw, 100vw"
           />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold"
+              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#79552F' }}
+            >
+              {mono('title')}
+            </h2>
+          </div>
         </Link>
 
         {/* Column 2 - Mosaic */}
-        <Link href={`/${locale}/mosaic`} className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
+        <Link 
+          href={`/${locale}/mosaic`} 
+          className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+        >
           <Image
             src="/mosaicc-group.png"
             alt="Mosaic tile group"
             fill
-            className="object-contain"
+            className="object-contain group-hover:opacity-50 transition-opacity duration-300"
             sizes="(min-width: 768px) 33vw, 100vw"
           />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold"
+              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#7A6104' }}
+            >
+              {mosaic('title')}
+            </h2>
+          </div>
         </Link>
 
         {/* Column 3 - Mirror */}
-        <Link href={`/${locale}/mirror`} className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
+        <Link 
+          href={`/${locale}/mirror`} 
+          className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+        >
           <Image
             src="/mirror-group.png"
             alt="Mirror tile group"
             fill
-            className="object-contain"
+            className="object-contain group-hover:opacity-50 transition-opacity duration-300"
             sizes="(min-width: 768px) 33vw, 100vw"
           />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold"
+              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#5B5A55' }}
+            >
+              {mirror('title')}
+            </h2>
+          </div>
         </Link>
       </div>
     </section>

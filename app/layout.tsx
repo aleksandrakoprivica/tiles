@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Bebas_Neue, IBM_Plex_Mono } from 'next/font/google';
@@ -25,6 +26,12 @@ const ibmPlexMono = IBM_Plex_Mono({
   weight: ['400', '500'],
   display: 'swap',
 });
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,

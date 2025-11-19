@@ -5,6 +5,10 @@
     "contact": "KONTAKT",
     "backHome": "Nazad na početnu"
   },
+  "main": {
+    "exploreCollection": "Istraži Kolekciju",
+    "clickToExplore": "Klikni da istražiš"
+  },
   "mono": {
     "title": "Mono Kolekcija",
     "description": "Mono kolekcija donosi čist minimalizam kroz stolove izrađene od pločica velikog formata. Jednostavne linije i smirene teksture stvaraju komad koji se lako uklapa u svaki prostor, dok ručna izrada daje toplinu i autentičnost. ",
@@ -35,6 +39,40 @@
       "title": "Nega",
       "description": "Jednostavna nega koja prati jednostavan dizajn: vlažna krpa za redovno čišćenje i blago sredstvo za mrlje. Površina se lako održava i ne zahteva posebne proizvode."
     }
+  },
+  "mosaic": {
+    "title": "Mosaic Kolekcija",
+    "series": "Mosaic Serija",
+    "description": "Kolekcija koja slavi ručnu izradu i detalj—svaki sto je napravljen od pažljivo postavljenih sitnih pločica. Ritmične šare, bogata tekstura i ručni karakter unose dubinu i toplinu u svaki prostor.",
+    "whyMosaic": "Zašto Mozaic",
+    "whyMosaicDescription": "Mozaic stolovi su funkcionalna umetnost. Na desetine pločica spajaju se u jedinstvene stolove koje privlače pažnju i donose umetničku energiju u prostor.",
+    "specs": {
+      "finish": "Završna obrada",
+      "finishValue": "Mat ili Blagi Sjaj",
+      "leadTime": "Rok izrade",
+      "leadTimeValue": "4–6 nedelja",
+      "sizes": "Dimenzije",
+      "sizesValue": "60cm – 140cm",
+      "use": "Upotreba",
+      "useValue": "Enterijer / Eksterijer",
+      "palette": "Paleta",
+      "paletteValue": "Neutralne boje, jarke boje, pločice sa efektima"
+    },
+    "material": {
+      "title": "Materijal",
+      "description": "Izrađeno od sitnih keramičkih i kamenih pločica postavljenih u izdržljivu kompozitnu osnovu sa teksturiranim mineralnim osećajem."
+    },
+    "finish": {
+      "title": "Završna obrada",
+      "description": "Blago zaobljene ivice i zaštitni sloj koji štiti od fleka i čuva prirodnu boju i detalje pločica."
+    },
+    "care": {
+      "title": "Održavanje",
+      "description": "Prebrisati vlažnom krpom i blagim sapunom. Nije potrebna posebna oprema ili specijalno održavanje."
+    }
+  },
+  "mirror": {
+    "title": "Mirror Kolekcija"
   },
   "footer": {
     "navigation": "Navigacija",

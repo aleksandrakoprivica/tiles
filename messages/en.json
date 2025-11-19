@@ -6,7 +6,8 @@
     "backHome": "Back to home"
   },
   "main": {
-
+    "exploreCollection": "Explore Collection",
+    "clickToExplore": "Click to explore"
   },
   "mono": {
     "title": "Mono Collection",
@@ -39,6 +40,40 @@
       "title": "Care",
       "description": "Wipe with a damp cloth, spot clean with neutral soap. No special kits, no fussy upkeep."
     }
+  },
+  "mosaic": {
+    "title": "Mosaic Collection",
+    "series": "Mosaic Series",
+    "description": "A celebration of craft and detail—this collection features tables built from carefully arranged small tiles. Each piece showcases rhythmic patterns, rich texture, and a handcrafted look that brings depth and character to any space.",
+    "whyMosaic": "Why Mosaic",
+    "whyMosaicDescription": "Mosaic tables stand out as functional art. Dozens of individual tiles come together to form unique tables that catch the eye and bring artistic energy into any room.",
+    "specs": {
+      "finish": "Finish",
+      "finishValue": "Matte or Soft Gloss",
+      "leadTime": "Lead Time",
+      "leadTimeValue": "4–6 weeks",
+      "sizes": "Sizes",
+      "sizesValue": "60cm – 140cm",
+      "use": "Use",
+      "useValue": "Indoor / Outdoor",
+      "palette": "Palette",
+      "paletteValue": "Neutral colors, bright colors, tiles with effects"
+    },
+    "material": {
+      "title": "Material",
+      "description": "Crafted from small ceramic and stone tiles set into a durable composite base, offering a textured, mineral feel."
+    },
+    "finish": {
+      "title": "Finish",
+      "description": "Soft edges with a protective seal that resists stains while preserving tile color and detail."
+    },
+    "care": {
+      "title": "Care",
+      "description": "Wipe with a damp cloth and mild soap. No special cleaning kits or maintenance required."
+    }
+  },
+  "mirror": {
+    "title": "Mirror Collection"
   },
   "footer": {
     "navigation": "Navigation",
