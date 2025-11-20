@@ -73,7 +73,10 @@
     }
   },
   "mirror": {
-    "title": "Mirror Collection"
+    "title": "Mirror Collection",
+    "description": "Reflective surfaces that add depth, light, and modern elegance to every room. Each piece is framed with precise edges and finished to create soft glows rather than harsh glare.",
+    "detailsTitle": "Dimension & Light",
+    "detailsCopy": "Layer mirror tables together or let a single accent float in a minimal space. Each surface is hand-backed to soften reflections and keep the look refined."
   },
   "footer": {
     "navigation": "Navigation",

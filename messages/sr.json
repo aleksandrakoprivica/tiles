@@ -72,7 +72,10 @@
     }
   },
   "mirror": {
-    "title": "Mirror Kolekcija"
+    "title": "Mirror Kolekcija",
+    "description": "Refleksije koje dodaju dubinu, svetlo i modernu eleganciju svakom prostoru. Svaki komad ima precizno obrađene ivice i završnu obradu koja daje mek sjaj umesto oštrog odsjaja.",
+    "detailsTitle": "Dimenzija i Svetlost",
+    "detailsCopy": "Kombinujte više mirror stolova ili pustite da jedan akcenat lebdi u minimalnom prostoru. Svaka površina je ručno obrađena sa zadnje strane kako bi refleksija bila mekša i sofisticirana."
   },
   "footer": {
     "navigation": "Navigacija",
