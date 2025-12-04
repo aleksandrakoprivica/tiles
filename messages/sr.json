@@ -3,6 +3,10 @@
     "home": "POČETNA",
     "about": "O NAMA",
     "contact": "KONTAKT",
+    "collections": "KOLEKCIJE",
+    "mono": "Mono",
+    "mosaic": "Mosaic",
+    "mirror": "Mirror",
     "backHome": "Nazad na početnu"
   },
   "main": {
@@ -73,9 +77,73 @@
   },
   "mirror": {
     "title": "Mirror Kolekcija",
-    "description": "Refleksije koje dodaju dubinu, svetlo i modernu eleganciju svakom prostoru. Svaki komad ima precizno obrađene ivice i završnu obradu koja daje mek sjaj umesto oštrog odsjaja.",
+    "description": "Refleksije koje dodaju dubinu, svetlo i modernu eleganciju svakom prostoru.",
     "detailsTitle": "Dimenzija i Svetlost",
     "detailsCopy": "Kombinujte više mirror stolova ili pustite da jedan akcenat lebdi u minimalnom prostoru. Svaka površina je ručno obrađena sa zadnje strane kako bi refleksija bila mekša i sofisticirana."
+  },
+  "aboutPage": {
+    "title": "Napravljeno od pločica, stvoreno za život.",
+    "subtitle": "Tiles je mali studio koji radi sa fragmentima mermera, ogledalima i pločama velikog formata kako bi nastali skulpturalni stolovi i objekti.",
+    "studioIntroTitle": "Smešteni između radionica i showroom-a.",
+    "studioIntroCopy": "Prototipe razvijamo u zajedničkom proizvodnom prostoru, a završnu obradu radimo u studiju sa prirodnim svetlom gde klijenti biraju površine, ivice i okove.",
+    "principles": {
+      "craftTitle": "Dizajn koji počinje materijalom",
+      "craftCopy": "Polazimo od ploča, teraco fragmenata i ogledala kako bi materijal definisao proporciju, ton i detalj.",
+      "scaleTitle": "Skala koja se prilagođava",
+      "scaleCopy": "Svaki komad crtamo kao modularni sistem koji može da raste od jednog klub stola do velike lobby instalacije.",
+      "touchTitle": "Ljudski dodir",
+      "touchCopy": "Ivice se ručno bruse, spojevi se toniraju prema površini, a svaki sto dobija meki mat premaz."
+    },
+    "process": {
+      "briefTitle": "Brif",
+      "briefCopy": "Podelite moodboard, plan prostora ili paletu boja, a mi ih pretvaramo u geometriju i završne obrade.",
+      "prototypeTitle": "Prototip",
+      "prototypeCopy": "Gradimo makete od pene, testiramo raspored pločica i šaljemo foto ažuriranja ili vas pozivamo u studio.",
+      "installTitle": "Ugradnja",
+      "installCopy": "Dostava uz potpunu pažnju, nivelisanje na licu mesta i uputstva za negu kako bi komad dugo trajao."
+    },
+    "stats": {
+      "yearsLabel": "Godine oblikovanja nameštaja od pločica",
+      "yearsValue": "8+",
+      "clientsLabel": "Realizovanih projekata",
+      "clientsValue": "120+",
+      "citiesLabel": "Gradova u kojima smo instalirali",
+      "citiesValue": "14"
+    },
+    "ctaTitle": "Želite posetu studiju?",
+    "ctaCopy": "Zakažite termin da pogledate materijale, vidite prototipe ili započnete komad po meri.",
+    "ctaButton": "Zakažite posetu"
+  },
+  "contactPage": {
+    "title": "Hajde da napravimo nešto po meri.",
+    "subtitle": "Pošaljite nam plan, skicu ili samo inspiraciju.",
+    "methods": {
+      "emailTitle": "Email",
+      "emailValue": "studio@tiles.studio",
+      "phoneTitle": "Telefon / WhatsApp",
+      "phoneValue": "+381 64 123 456",
+      "phoneLink": "+38164123456"
+    },
+    "locationTitle": "Studio",
+    "locationCopy": "Bulevar despota Stefana 16, Beograd — Isporuka širom sveta.",
+    "formTitle": "Šta nam znači",
+    "formItems": {
+      "dimensions": "Dimenzije ili plan prostora (PDF ili screenshot).",
+      "materials": "Željeni materijali, boje ili referentni komadi.",
+      "timeline": "Željeni rok isporuke ili datum događaja."
+    },
+    "timelineTitle": "Tok projekta",
+    "timelineSteps": {
+      "callTitle": "Ideja",
+      "callCopy": "Zajedno definišemo ideju, funkciju i izgled stola koji pravimo baš za Vas.",
+      "prototypeTitle": "Realizacija",
+      "prototypeCopy": "Pravimo prototip, biramo materijale i usaglašavamo sve detalje.",
+      "deliveryTitle": "Isporuka",
+      "deliveryCopy": "Donosimo gotov sto, nameštamo ga u prostoru i ostavljamo da upotpuni i donese pečat Vašem prostoru."
+    },
+    "ctaTitle": "Spremni da počnemo?",
+    "ctaCopy": "Pošaljite nam par fotografija ili skica — odgovorićemo sa sledećim koracima.",
+    "ctaButton": "Pišite nam"
   },
   "footer": {
     "navigation": "Navigacija",

@@ -3,6 +3,10 @@
     "home": "HOME",
     "about": "ABOUT",
     "contact": "CONTACT",
+    "collections": "Collections",
+    "mono": "Mono",
+    "mosaic": "Mosaic",
+    "mirror": "Mirror",
     "backHome": "Back to home"
   },
   "main": {
@@ -77,6 +81,70 @@
     "description": "Reflective surfaces that add depth, light, and modern elegance to every room. Each piece is framed with precise edges and finished to create soft glows rather than harsh glare.",
     "detailsTitle": "Dimension & Light",
     "detailsCopy": "Layer mirror tables together or let a single accent float in a minimal space. Each surface is hand-backed to soften reflections and keep the look refined."
+  },
+  "aboutPage": {
+    "title": "Built from tile, made for living.",
+    "subtitle": "Tiles is a small studio working with marble fragments, mirror panels, and large-format slabs to create sculptural tables and objects.",
+    "studioIntroTitle": "Located between workshops and showrooms.",
+    "studioIntroCopy": "We prototype in a shared factory space, then finish each piece in a daylight studio where clients can review surfaces, edges, and hardware.",
+    "principles": {
+      "craftTitle": "Material-first design",
+      "craftCopy": "We start with slabs, terrazzo fragments, and mirror panels to let the material dictate proportion, tone, and detail.",
+      "scaleTitle": "Scale that adapts",
+      "scaleCopy": "Every piece is drafted as a modular system so it can stretch from a single coffee table to a full lobby installation.",
+      "touchTitle": "Human touch",
+      "touchCopy": "Edges are sanded by hand, joints are tinted to match each surface, and every table is sealed with a soft-matte finish."
+    },
+    "process": {
+      "briefTitle": "Brief",
+      "briefCopy": "Share mood boards, floor plans, or color palettes. We translate them into rough geometry and finishes.",
+      "prototypeTitle": "Prototype",
+      "prototypeCopy": "We build foam-core mockups, test tile layouts, and send photo updates or invite you to the studio.",
+      "installTitle": "Install",
+      "installCopy": "White-glove delivery, on-site leveling, and care notes so the piece ages beautifully."
+    },
+    "stats": {
+      "yearsLabel": "Years shaping tile furniture",
+      "yearsValue": "8+",
+      "clientsLabel": "Projects shipped",
+      "clientsValue": "120+",
+      "citiesLabel": "Cities installed",
+      "citiesValue": "14"
+    },
+    "ctaTitle": "Want to visit the studio?",
+    "ctaCopy": "Book a session to review materials, see prototypes in person, or start a custom commission.",
+    "ctaButton": "Schedule a visit"
+  },
+  "contactPage": {
+    "title": "Let’s build something custom.",
+    "subtitle": "Share floor plans, rough sketches, or simple inspiration.",
+    "methods": {
+      "emailTitle": "Email",
+      "emailValue": "studio@tiles.studio",
+      "phoneTitle": "Phone / WhatsApp",
+      "phoneValue": "+381 64 123 456",
+      "phoneLink": "+38164123456"
+    },
+    "locationTitle": "Studio",
+    "locationCopy": "Bulevar despota Stefana 16, Belgrade — Worldwide shipping available.",
+    "formTitle": "What to include",
+    "formItems": {
+      "dimensions": "Dimensions or floor plan (PDF or screenshot).",
+      "materials": "Preferred materials, colors, or reference pieces.",
+      "timeline": "Ideal delivery date or event deadline."
+    },
+    "timelineTitle": "Project timeline",
+    "timelineSteps": {
+      "callTitle": "Idea",
+      "callCopy": "We define the idea together—how the piece should look, feel, and function in your space.",
+      "prototypeTitle": "Realisation",
+      "prototypeCopy": "We develop prototypes, choose materials, and align on every detail.",
+      "deliveryTitle": "Delivery",
+      "deliveryCopy": "We deliver and install the finished piece, level it in place, and let you enjoy its presence."
+    },
+    "ctaTitle": "Ready to start?",
+    "ctaCopy": "Email us a note with a few photos or sketches—we’ll reply with next steps.",
+    "ctaButton": "Email the studio"
   },
   "footer": {
     "navigation": "Navigation",

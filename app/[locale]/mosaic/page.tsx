@@ -38,8 +38,8 @@ export default async function MosaicPage({
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-16 text-foreground">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 pt-6">
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 pt-4 md:pt-6">
         <Link
           href={`/${locale}`}
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground/60 hover:text-foreground transition-colors"
@@ -70,8 +70,8 @@ export default async function MosaicPage({
       </div>
 
       {/* Hero */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
-        <div className="flex flex-col md:flex-row items-stretch gap-10 md:gap-14">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 pt-6 pb-10 md:py-20">
+        <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-14">
           <div className="md:w-5/12 flex flex-col justify-between h-full">
             <div className="space-y-8 md:space-y-12">
               <h1
@@ -104,7 +104,7 @@ export default async function MosaicPage({
             </div>
           </div>
 
-          <div className="md:flex-1 relative w-full aspect-[3/4] rounded-sm overflow-hidden">
+          <div className="md:flex-1 relative w-full aspect-[5/6] md:aspect-[3/4] rounded-sm overflow-hidden">
             <Image
               src="/mosaic1.png"
               alt="Mosaic hero table"
@@ -182,7 +182,7 @@ export default async function MosaicPage({
           </div>
         </div>
         
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
             <Image
               src="/mosaic2.png"

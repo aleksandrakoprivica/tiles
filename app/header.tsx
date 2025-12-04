@@ -12,6 +12,7 @@ export function Header() {
   const locale = useLocale();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isCollectionsOpen, setIsCollectionsOpen] = useState(false);
 
   const navItems = [
     {
@@ -30,10 +31,25 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto pl-3 pr-1 sm:pl-4 sm:pr-1 md:px-6 lg:px-8">
-        <div className="flex md:grid md:grid-cols-12 justify-between md:gap-4 items-center h-14 md:h-16">
+      <div className="max-w-7xl mx-auto pl-3 pr-0 sm:pl-4 sm:pr-0 md:px-6 lg:px-8">
+        <div className="flex md:grid md:grid-cols-12 items-center md:gap-4 h-14 md:h-16">
+          {/* Logo */}
+          <Link 
+            href={`/${locale}`}
+            className="md:col-span-3 xl:col-span-2 flex items-center md:justify-start" 
+            prefetch
+          >
+            <Image 
+              src="/logo-tiles.png"
+              alt="logo" 
+              width={250} 
+              height={120}
+              className="w-32 md:w-64 h-auto"
+            />
+          </Link>
+
           {/* Mobile Menu Button */}
-          <div className="block md:hidden">
+          <div className="block md:hidden ml-auto">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-foreground hover:bg-foreground/10 transition-colors"
@@ -71,25 +87,10 @@ export function Header() {
             </button>
           </div>
 
-          {/* Logo */}
-          <Link 
-            href={`/${locale}`}
-            className="ml-auto -mr-1 md:mr-0 md:ml-0 md:col-span-3 xl:col-span-2 flex items-center md:justify-start" 
-            prefetch
-          >
-            <Image 
-              src="/logo-tiles.png"
-              alt="logo" 
-              width={250} 
-              height={120}
-              className="w-32 md:w-64 h-auto"
-            />
-          </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-0 justify-end items-center md:col-span-9 xl:col-span-10">
             <ul className="items-center flex gap-6">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
@@ -101,8 +102,60 @@ export function Header() {
                   >
                     {item.label}
                   </Link>
+
+                  {/* Insert collections dropdown right after the first item (Home) */}
+                  {index === 0 && (
+                    <span className="relative inline-block ml-6 align-middle">
+                      {/* Collections dropdown (desktop) */}
+                      <button
+                        type="button"
+                        onClick={() => setIsCollectionsOpen((open) => !open)}
+                        className={`font-semibold text-base transition-colors duration-200 uppercase inline-flex items-center gap-1 ${
+                          pathname?.includes('/mono') || pathname?.includes('/mosaic') || pathname?.includes('/mirror')
+                            ? 'text-foreground'
+                            : 'text-foreground/70 hover:text-foreground'
+                        }`}
+                        style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                      >
+                        {t('collections')}
+                        <span className="text-[10px] tracking-[0.2em]">
+                          {isCollectionsOpen ? '▲' : '▼'}
+                        </span>
+                      </button>
+
+                      {isCollectionsOpen && (
+                        <div className="absolute left-0 mt-2 w-40 rounded-sm border border-foreground/10 bg-background/95 shadow-lg py-2 z-50">
+                          <Link
+                            href={`/${locale}/mono`}
+                            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
+                            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                            onClick={() => setIsCollectionsOpen(false)}
+                          >
+                            {t('mono')}
+                          </Link>
+                          <Link
+                            href={`/${locale}/mosaic`}
+                            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
+                            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                            onClick={() => setIsCollectionsOpen(false)}
+                          >
+                            {t('mosaic')}
+                          </Link>
+                          <Link
+                            href={`/${locale}/mirror`}
+                            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
+                            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                            onClick={() => setIsCollectionsOpen(false)}
+                          >
+                            {t('mirror')}
+                          </Link>
+                        </div>
+                      )}
+                    </span>
+                  )}
                 </li>
               ))}
+
               {/* Language Switcher */}
               <li className="flex gap-2 ml-4">
                 {locales.map((loc) => (
@@ -126,15 +179,70 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-foreground/10 bg-background/95 backdrop-blur-md">
-            <nav className="px-3 py-4">
-              <ul className="flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <li key={item.href}>
+          <div className="md:hidden border-t border-foreground/10 bg-background/98 backdrop-blur-md">
+            <nav className="px-4 py-3">
+              <ul className="flex flex-col gap-2">
+                {/* First: home */}
+                <li className="border-b border-foreground/5">
+                  <Link
+                    href={navItems[0].href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block py-2 text-xs tracking-[0.25em] uppercase transition-colors duration-200 ${
+                      pathname === navItems[0].href ? 'text-foreground' : 'text-foreground/70 hover:text-foreground'
+                    }`}
+                    style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                    prefetch
+                  >
+                    {navItems[0].label}
+                  </Link>
+                </li>
+
+                {/* Collections group (mobile) directly after home */}
+                <li className="pt-3 border-b border-foreground/5">
+                  <p
+                    className="text-[11px] uppercase tracking-[0.3em] text-foreground/60 mb-2"
+                    style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                  >
+                    {t('collections')}
+                  </p>
+                  <div className="flex flex-col gap-1">
+                    <Link
+                      href={`/${locale}/mono`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-xs uppercase text-foreground/80 py-1 tracking-[0.2em]"
+                      style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                    >
+                      {t('mono')}
+                    </Link>
+                    <Link
+                      href={`/${locale}/mosaic`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-xs uppercase text-foreground/80 py-1 tracking-[0.2em]"
+                      style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                    >
+                      {t('mosaic')}
+                    </Link>
+                    <Link
+                      href={`/${locale}/mirror`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-xs uppercase text-foreground/80 py-1 tracking-[0.2em]"
+                      style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                    >
+                      {t('mirror')}
+                    </Link>
+                  </div>
+                </li>
+                
+                {/* Remaining nav items: about, contact */}
+                {navItems.slice(1).map((item) => (
+                  <li
+                    key={item.href}
+                    className="border-b border-foreground/5 last:border-b-0"
+                  >
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`font-semibold text-base transition-colors duration-200 uppercase block py-2 ${
+                      className={`block py-2 text-xs tracking-[0.25em] uppercase transition-colors duration-200 ${
                         pathname === item.href ? 'text-foreground' : 'text-foreground/70 hover:text-foreground'
                       }`}
                       style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}

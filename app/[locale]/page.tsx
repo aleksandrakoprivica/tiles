@@ -35,7 +35,7 @@ export default async function Home({
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col">
         {/* Mobile Brand Tagline - Visible on mobile, hidden on desktop */}
-        <div className="lg:hidden px-4 pt-16 pb-6">
+        <div className="lg:hidden px-3 pt-14 pb-4">
           <p className="italic text-foreground/70 text-lg mb-4" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
             Tile it your way.
           </p>
@@ -44,13 +44,13 @@ export default async function Home({
           </p>
         </div>
 
-        {/* Latest Drop Label */}
-        <div className="pt-16 md:pt-20 px-4 md:px-8 pb-2">
+        {/* Spacer / top offset for hero image */}
+        <div className="pt-10 md:pt-20 px-3 md:px-8 pb-1">
 
         </div>
 
         {/* Product Showcase */}
-        <div className="flex-1 px-4 md:px-8 pb-8 -mt-2">
+        <div className="flex-1 px-3 md:px-8 pb-6 -mt-2">
           {/* Product Image */}
           <div className="relative aspect-[9/16] md:aspect-[16/9] bg-foreground/5 rounded-lg overflow-hidden w-full">
             {/* Mobile Image */}
@@ -74,11 +74,19 @@ export default async function Home({
       </main>
     </div>
     {/* Photo Grid Section - Full Width */}
-    <section className="w-full mt-8 md:mt-20 px-4 md:px-8 pb-8">
-
+    <section className="w-full mt-6 md:mt-20 px-0 md:px-8 pb-6 md:pb-10">
+      {/* Collections title */}
+      <div className="mb-6 md:mb-10 text-center">
+        <p
+          className="text-2xl md:text-4xl text-foreground"
+          style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.15em' }}
+        >
+          Kolekcije
+        </p>
+      </div>
 
       {/* 3 Column Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 w-full">
         {/* Column 1 - Mono */}
         <Link 
           href={`/${locale}/mono`} 

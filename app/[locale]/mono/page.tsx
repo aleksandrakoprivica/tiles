@@ -38,7 +38,7 @@ export default async function MonoPage({
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-16 text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-6xl mx-auto px-4 md:px-8 pt-6">
         <Link
           href={`/${locale}`}

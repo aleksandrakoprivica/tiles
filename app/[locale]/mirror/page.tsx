@@ -22,7 +22,7 @@ export default async function MirrorPage({
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-16 text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-6xl mx-auto px-4 md:px-8 pt-6">
         <Link
           href={`/${locale}`}
@@ -100,9 +100,21 @@ export default async function MirrorPage({
       </section>
 
       {/* Gallery */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-16 md:pb-24 space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {gallery.map((image) => (
+      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-16 md:pb-24 space-y-8">
+        {/* Hero gallery image */}
+        <div className="relative aspect-[16/9] rounded-sm overflow-hidden border border-foreground/10 bg-foreground/5">
+          <Image
+            src={gallery[0].src}
+            alt={gallery[0].alt}
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 60vw, 100vw"
+          />
+        </div>
+
+        {/* Supporting images */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {gallery.slice(1).map((image) => (
             <div
               key={image.src}
               className="relative aspect-[4/3] rounded-sm overflow-hidden border border-foreground/10 bg-foreground/5"
