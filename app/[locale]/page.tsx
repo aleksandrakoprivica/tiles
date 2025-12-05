@@ -74,26 +74,26 @@ export default async function Home({
       </main>
     </div>
     {/* Photo Grid Section - Full Width */}
-    <section className="w-full mt-6 md:mt-20 px-0 md:px-8 pb-6 md:pb-10">
+    <section className="w-full mt-6 md:mt-20 md:px-8 pb-6 md:pb-10">
       {/* Collections title */}
-      <div className="mb-6 md:mb-10 text-center">
-        <p
-          className="text-2xl md:text-4xl text-foreground"
-          style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.15em' }}
+      <div className="mb-8 md:mb-12 text-center px-3 md:px-0">
+        <h2
+          className="text-4xl md:text-6xl lg:text-7xl text-foreground tracking-wider"
+          style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.2em' }}
         >
           Kolekcije
-        </p>
+        </h2>
       </div>
 
       {/* 3 Column Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 w-[calc(100%+6rem)] -mx-12 md:mx-0 md:w-full">
         {/* Column 1 - Mono */}
         <Link 
           href={`/${locale}/mono`} 
           className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
         >
           <Image
-            src="/mono-group.png"
+            src="/monogroup1.png"
             alt="Mono tile group"
             fill
             className="object-contain group-hover:opacity-50 transition-opacity duration-300"
@@ -102,7 +102,7 @@ export default async function Home({
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <h2 
               className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#79552F' }}
+              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#98866E' }}
             >
               {mono('title')}
             </h2>

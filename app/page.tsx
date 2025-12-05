@@ -69,7 +69,7 @@ export default function Home() {
         {/* Column 1 - Mono */}
         <Link href="/mono" className="relative w-full aspect-[3/4] overflow-hidden hover:opacity-90 transition-opacity">
           <Image
-            src="/mono-group.png"
+            src="/monogroup1.png"
             alt="Mono tile group"
             fill
             className="object-contain"

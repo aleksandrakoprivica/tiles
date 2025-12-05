@@ -20,12 +20,6 @@ export default async function AboutPage({
     { title: t('principles.touchTitle'), copy: t('principles.touchCopy') },
   ];
 
-  const process = [
-    { title: t('process.briefTitle'), copy: t('process.briefCopy') },
-    { title: t('process.prototypeTitle'), copy: t('process.prototypeCopy') },
-    { title: t('process.installTitle'), copy: t('process.installCopy') },
-  ];
-
   const stats = [
     { label: t('stats.yearsLabel'), value: t('stats.yearsValue') },
     { label: t('stats.clientsLabel'), value: t('stats.clientsValue') },

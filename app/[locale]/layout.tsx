@@ -4,7 +4,7 @@ import { Footer } from "../components/footer";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { locales } from '../../i18n';
+import { locales, type Locale } from '../../i18n';
 
 export const metadata: Metadata = {
   title: "Tiles",
@@ -24,7 +24,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
   
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
