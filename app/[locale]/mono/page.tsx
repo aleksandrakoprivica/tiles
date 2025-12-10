@@ -28,10 +28,6 @@ export default async function MonoPage({
       copy: t('material.description'),
     },
     {
-      title: t('finish.title'),
-      copy: t('finish.description'),
-    },
-    {
       title: t('care.title'),
       copy: t('care.description'),
     },
@@ -119,7 +115,7 @@ export default async function MonoPage({
 
       {/* Material Story */}
       <section className="bg-[var(--color-grey)]/6 border-t border-b border-foreground/10">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-2 gap-6">
           {materialCards.map((card) => (
             <div
               key={card.title}
@@ -158,18 +154,9 @@ export default async function MonoPage({
             >
               {t('whyMonoDescription')}
             </p>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div className="border-t border-foreground/20 pt-4">
-                <p className="text-foreground/60 mb-1">{t('specs.palette')}</p>
-                <p style={{ fontFamily: "var(--font-ibm-plex-mono)" }}>
-                  {t('specs.paletteValue')}
-                </p>
-              </div>
-
-            </div>
           </div>
 
-          <div className="md:col-span-3 grid grid-cols-1 gap-6">
+          <div className="md:col-span-3">
             <div className="relative w-full aspect-[6/3] rounded-sm overflow-hidden border border-foreground/10">
               <Image
                 src="/mono-1.png"
@@ -179,26 +166,36 @@ export default async function MonoPage({
                 sizes="(min-width: 768px) 60vw, 100vw"
               />
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
-                <Image
-                  src="/mono-4.png"
-                  alt="Mono styling detail"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 30vw, 100vw"
-                />
-              </div>
-              <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
-                <Image
-                  src="/mono-5.png"
-                  alt="Mono tabletop closeup"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 30vw, 100vw"
-                />
-              </div>
-            </div>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
+            <Image
+              src="/mono-4.png"
+              alt="Mono styling detail"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
+          </div>
+          <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
+            <Image
+              src="/mono-5.png"
+              alt="Mono tabletop closeup"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
+          </div>
+          <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
+            <Image
+              src="/mono-9.jpeg"
+              alt="Mono table detail"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 33vw, 100vw"
+            />
           </div>
         </div>
       </section>

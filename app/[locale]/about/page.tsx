@@ -14,18 +14,6 @@ export default async function AboutPage({
   const t = await getTranslations({ locale, namespace: 'aboutPage' });
   const common = await getTranslations({ locale, namespace: 'common' });
 
-  const principles = [
-    { title: t('principles.craftTitle'), copy: t('principles.craftCopy') },
-    { title: t('principles.scaleTitle'), copy: t('principles.scaleCopy') },
-    { title: t('principles.touchTitle'), copy: t('principles.touchCopy') },
-  ];
-
-  const stats = [
-    { label: t('stats.yearsLabel'), value: t('stats.yearsValue') },
-    { label: t('stats.clientsLabel'), value: t('stats.clientsValue') },
-    { label: t('stats.citiesLabel'), value: t('stats.citiesValue') },
-  ];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-6xl mx-auto px-4 md:px-8 pt-6">
@@ -60,14 +48,8 @@ export default async function AboutPage({
 
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start">
-          <div className="space-y-8">
-            <p
-              className="text-xs uppercase tracking-[0.3em] text-foreground/50"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-            >
-              Tiles Studio
-            </p>
+        <div className="space-y-12">
+          <div className="space-y-4">
             <h1
               className="text-5xl md:text-7xl leading-tight"
               style={{ fontFamily: "var(--font-bebas-neue)" }}
@@ -82,85 +64,48 @@ export default async function AboutPage({
             </p>
           </div>
 
-          <div className="space-y-6">
-            {/* Stacked tiles image */}
-            <div className="relative w-full aspect-[4/3] rounded-sm overflow-hidden border border-foreground/10 bg-foreground/5">
+          {/* Family Story with Image */}
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-stretch">
+            <div className="border border-foreground/10 rounded-sm p-6 md:p-10 bg-background/80 flex flex-col">
+              <p
+                className="text-xs uppercase tracking-[0.3em] text-foreground/50 mb-4"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {t('familyStoryTitle')}
+              </p>
+              <p
+                className="text-base md:text-lg text-foreground/80 leading-relaxed flex-grow"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {t('familyStoryCopy')}
+              </p>
+            </div>
+
+            <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10 bg-foreground/5">
               <Image
                 src="/stacked.png"
-                alt="Stacked tile tables in the studio"
+                alt="Stacked tile tables"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 50vw, 100vw"
                 priority
               />
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((item) => (
-                <div
-                  key={item.label}
-                  className="border border-foreground/10 rounded-sm p-5 flex flex-col gap-2 bg-background/80"
-                >
-                  <p
-                    className="text-sm uppercase tracking-[0.2em] text-foreground/50"
-                    style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-                  >
-                    {item.label}
-                  </p>
-                  <p
-                    className="text-3xl md:text-4xl"
-                    style={{ fontFamily: "var(--font-bebas-neue)" }}
-                  >
-                    {item.value}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Studio intro */}
+      {/* Tiles Letters Image */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 pb-12 md:pb-16">
-        <div className="border border-foreground/10 rounded-sm p-6 md:p-10 bg-[var(--color-grey)]/5">
-          <p
-            className="text-xs uppercase tracking-[0.3em] text-foreground/50 mb-3"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-          >
-            {t('studioIntroTitle')}
-          </p>
-          <p
-            className="text-lg md:text-xl text-foreground/80 leading-relaxed"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-          >
-            {t('studioIntroCopy')}
-          </p>
-        </div>
-      </section>
-
-      {/* Principles */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-12 md:pb-16">
-        <div className="grid md:grid-cols-3 gap-6">
-          {principles.map((principle) => (
-            <div
-              key={principle.title}
-              className="border border-foreground/10 rounded-sm p-6 flex flex-col gap-4 bg-background/80"
-            >
-              <p
-                className="text-xs uppercase tracking-[0.3em] text-foreground/50"
-                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-              >
-                {principle.title}
-              </p>
-              <p
-                className="text-sm md:text-base text-foreground/80 leading-relaxed"
-                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-              >
-                {principle.copy}
-              </p>
-            </div>
-          ))}
+        <div className="relative w-full">
+          <Image
+            src="/tilesletters.png"
+            alt="Tiles letters"
+            width={1920}
+            height={1080}
+            className="w-full h-auto"
+            sizes="(min-width: 768px) 100vw, 100vw"
+          />
         </div>
       </section>
 

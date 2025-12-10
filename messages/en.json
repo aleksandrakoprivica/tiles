@@ -11,7 +11,8 @@
   },
   "main": {
     "exploreCollection": "Explore Collection",
-    "clickToExplore": "Click to explore"
+    "clickToExplore": "Click to explore",
+    "collectionsTitle": "Collections"
   },
   "mono": {
     "title": "Mono Collection",
@@ -78,15 +79,36 @@
   },
   "mirror": {
     "title": "Mirror Collection",
-    "description": "Reflective surfaces that add depth, light, and modern elegance to every room. Each piece is framed with precise edges and finished to create soft glows rather than harsh glare.",
-    "detailsTitle": "Dimension & Light",
-    "detailsCopy": "Layer mirror tables together or let a single accent float in a minimal space. Each surface is hand-backed to soften reflections and keep the look refined."
+    "description": "Mirror Tables blur the line between furniture and light. Featuring reflective tile surfaces, each piece transforms its surroundings and expands the room visually while adding a refined, contemporary edge.",
+    "descriptionSecond": "Bold yet elegant, Mirror Tables are designed to stand out without overpowering the space. Whether placed in modern interiors or used as a statement piece, they bring depth, brightness, and a sense of quiet luxury.",
+    "whyMirror": "Why Mirror",
+    "whyMirrorDescription": "Mirror Tables stand out as functional art. Each piece reflects light and space, creating a dynamic visual experience that transforms any room. Precision-laid mirrored tiles paired with clean, architectural forms make these tables both distinctive and adaptable to your vision.",
+    "features": {
+      "lightAmplifying": {
+        "title": "Light Amplifying Surface",
+        "description": "Mirrored tiles reflect natural and artificial light, making spaces feel brighter and more open."
+      },
+      "distinctiveCharacter": {
+        "title": "Distinctive Character",
+        "description": "Each table interacts uniquely with its surroundings, creating a dynamic and ever-changing look."
+      },
+      "modernCraftsmanship": {
+        "title": "Modern Craftsmanship",
+        "description": "Precision-laid mirrored tiles paired with a clean, architectural form."
+      },
+      "customMade": {
+        "title": "Custom Made",
+        "description": "Size, tile format, and layout can be tailored to your vision."
+      }
+    }
   },
   "aboutPage": {
-    "title": "Built from tile, made for living.",
-    "subtitle": "Tiles is a small studio working with marble fragments, mirror panels, and large-format slabs to create sculptural tables and objects.",
-    "studioIntroTitle": "Located between workshops and showrooms.",
-    "studioIntroCopy": "We prototype in a shared factory space, then finish each piece in a daylight studio where clients can review surfaces, edges, and hardware.",
+    "title": "About Us",
+    "subtitle": "We are a small business from Serbia, crafting unique tables from tiles, marble, and mirror panels.",
+    "descriptionSectionTitle": "",
+    "descriptionSectionCopy": "",
+    "familyStoryTitle": "Our Story",
+    "familyStoryCopy": "Based in Serbia, we create handcrafted tables using tiles, marble fragments, and mirror panels. Each piece is made with care and attention to detail, bringing together traditional craftsmanship and modern design. We work directly with our clients to create custom pieces that fit their space and style. Our process begins with understanding your vision—whether you're looking for a statement piece for your living room or a functional work surface for your office. We source quality materials locally and internationally, ensuring each table not only looks beautiful but stands the test of time. From initial consultation to final installation, we're with you every step of the way, making sure the finished piece exceeds your expectations.",
     "principles": {
       "craftTitle": "Material-first design",
       "craftCopy": "We start with slabs, terrazzo fragments, and mirror panels to let the material dictate proportion, tone, and detail.",
@@ -99,7 +121,7 @@
       "briefTitle": "Brief",
       "briefCopy": "Share mood boards, floor plans, or color palettes. We translate them into rough geometry and finishes.",
       "prototypeTitle": "Prototype",
-      "prototypeCopy": "We build foam-core mockups, test tile layouts, and send photo updates or invite you to the studio.",
+      "prototypeCopy": "We build foam-core mockups, test tile layouts, and send photo updates or arrange a visit to review in person.",
       "installTitle": "Install",
       "installCopy": "White-glove delivery, on-site leveling, and care notes so the piece ages beautifully."
     },
@@ -111,8 +133,8 @@
       "citiesLabel": "Cities installed",
       "citiesValue": "14"
     },
-    "ctaTitle": "Want to visit the studio?",
-    "ctaCopy": "Book a session to review materials, see prototypes in person, or start a custom commission.",
+    "ctaTitle": "Want to work together?",
+    "ctaCopy": "Get in touch to review materials, see prototypes, or start a custom commission.",
     "ctaButton": "Schedule a visit"
   },
   "contactPage": {

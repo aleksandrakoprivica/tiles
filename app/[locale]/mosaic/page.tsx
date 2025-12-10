@@ -28,10 +28,6 @@ export default async function MosaicPage({
       copy: t('material.description'),
     },
     {
-      title: t('finish.title'),
-      copy: t('finish.description'),
-    },
-    {
       title: t('care.title'),
       copy: t('care.description'),
     },
@@ -119,7 +115,7 @@ export default async function MosaicPage({
 
       {/* Material Story */}
       <section className="bg-[var(--color-grey)]/6 border-t border-b border-foreground/10">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-2 gap-6">
           {materialCards.map((card) => (
             <div
               key={card.title}
@@ -158,15 +154,6 @@ export default async function MosaicPage({
             >
               {t('whyMosaicDescription')}
             </p>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div className="border-t border-foreground/20 pt-4">
-                <p className="text-foreground/60 mb-1">{t('specs.palette')}</p>
-                <p style={{ fontFamily: "var(--font-ibm-plex-mono)" }}>
-                  {t('specs.paletteValue')}
-                </p>
-              </div>
-
-            </div>
           </div>
 
           <div className="md:col-span-3">

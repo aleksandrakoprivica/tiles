@@ -11,7 +11,8 @@
   },
   "main": {
     "exploreCollection": "Istraži Kolekciju",
-    "clickToExplore": "Klikni da istražiš"
+    "clickToExplore": "Klikni da istražiš",
+    "collectionsTitle": "Kolekcije"
   },
   "mono": {
     "title": "Mono Kolekcija",
@@ -77,15 +78,36 @@
   },
   "mirror": {
     "title": "Mirror Kolekcija",
-    "description": "Refleksije koje dodaju dubinu, svetlo i modernu eleganciju svakom prostoru.",
-    "detailsTitle": "Dimenzija i Svetlost",
-    "detailsCopy": "Kombinujte više mirror stolova ili pustite da jedan akcenat lebdi u minimalnom prostoru. Svaka površina je ručno obrađena sa zadnje strane kako bi refleksija bila mekša i sofisticirana."
+    "description": "Mirror Tables su stolovi koji rade sa prostorom i svetlom. Površina od ogledalo-pločica reflektuje okolinu, dodaje dubinu enterijeru i menja se u zavisnosti od ugla, svetla i pokreta u prostoru.",
+    "descriptionSecond": "Ovi stolovi nisu samo funkcionalni objekti, već vizuelni akcenti. Diskretno upečatljivi, lako se uklapaju u savremene enterijere, ali istovremeno ostavljaju snažan utisak. Idealni su kao centralni komad ili detalj koji definiše prostor.",
+    "whyMirror": "Zašto Mirror",
+    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljene ogledalne pločice u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim vašoj viziji.",
+    "features": {
+      "lightAmplifying": {
+        "title": "Igra svetla i prostora",
+        "description": "Ogledalo-pločice reflektuju svetlo i vizuelno otvaraju prostor."
+      },
+      "distinctiveCharacter": {
+        "title": "Upečatljiv, ali nenametljiv dizajn",
+        "description": "Stol koji privlači pažnju bez dominacije nad prostorom."
+      },
+      "modernCraftsmanship": {
+        "title": "Precizna izrada",
+        "description": "Pažljivo postavljene pločice i čista, jasna forma."
+      },
+      "customMade": {
+        "title": "Mogućnost prilagođavanja",
+        "description": "Svaki sto se izrađuje po meri — dimenzije i detalji po izboru."
+      }
+    }
   },
   "aboutPage": {
-    "title": "Napravljeno od pločica, stvoreno za život.",
-    "subtitle": "Tiles je mali studio koji radi sa fragmentima mermera, ogledalima i pločama velikog formata kako bi nastali skulpturalni stolovi i objekti.",
-    "studioIntroTitle": "Smešteni između radionica i showroom-a.",
-    "studioIntroCopy": "Prototipe razvijamo u zajedničkom proizvodnom prostoru, a završnu obradu radimo u studiju sa prirodnim svetlom gde klijenti biraju površine, ivice i okove.",
+    "title": "O Nama",
+    "subtitle": "Mali smo posao iz Srbije koji pravi jedinstvene stolove od pločica, mermera i ogledala.",
+    "descriptionSectionTitle": "",
+    "descriptionSectionCopy": "",
+    "familyStoryTitle": "Naša Priča",
+    "familyStoryCopy": "Sa sedištem u Srbiji, pravimo ručno izrađene stolove koristeći pločice, fragmente mermera i ogledala. Svaki komad se pravi sa pažnjom i posvećenošću detaljima, spajajući tradicionalnu zanatsku izradu i savremeni dizajn. Radimo direktno sa klijentima kako bismo napravili komade po meri koji se uklapaju u njihov prostor i stil. Naš proces počinje razumevanjem vaše vizije—bilo da tražite akcentni komad za dnevni boravak ili funkcionalnu radnu površinu za kancelariju. Nabavljamo kvalitetne materijale lokalno i internacionalno, osiguravajući da svaki sto ne samo da izgleda lepo već i da izdrži test vremena. Od početne konsultacije do finalne instalacije, tu smo na svakom koraku, vodeći računa da gotov komad prevazilazi vaša očekivanja.",
     "principles": {
       "craftTitle": "Dizajn koji počinje materijalom",
       "craftCopy": "Polazimo od ploča, teraco fragmenata i ogledala kako bi materijal definisao proporciju, ton i detalj.",
@@ -98,7 +120,7 @@
       "briefTitle": "Brif",
       "briefCopy": "Podelite moodboard, plan prostora ili paletu boja, a mi ih pretvaramo u geometriju i završne obrade.",
       "prototypeTitle": "Prototip",
-      "prototypeCopy": "Gradimo makete od pene, testiramo raspored pločica i šaljemo foto ažuriranja ili vas pozivamo u studio.",
+      "prototypeCopy": "Gradimo makete od pene, testiramo raspored pločica i šaljemo foto ažuriranja ili organizujemo posetu za lični pregled.",
       "installTitle": "Ugradnja",
       "installCopy": "Dostava uz potpunu pažnju, nivelisanje na licu mesta i uputstva za negu kako bi komad dugo trajao."
     },
@@ -110,8 +132,8 @@
       "citiesLabel": "Gradova u kojima smo instalirali",
       "citiesValue": "14"
     },
-    "ctaTitle": "Želite posetu studiju?",
-    "ctaCopy": "Zakažite termin da pogledate materijale, vidite prototipe ili započnete komad po meri.",
+    "ctaTitle": "Želite da radimo zajedno?",
+    "ctaCopy": "Kontaktirajte nas da pogledate materijale, vidite prototipe ili započnete komad po meri.",
     "ctaButton": "Zakažite posetu"
   },
   "contactPage": {

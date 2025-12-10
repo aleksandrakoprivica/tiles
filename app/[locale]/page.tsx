@@ -14,6 +14,7 @@ export default async function Home({
   const mono = await getTranslations({ locale, namespace: 'mono' });
   const mosaic = await getTranslations({ locale, namespace: 'mosaic' });
   const mirror = await getTranslations({ locale, namespace: 'mirror' });
+  const main = await getTranslations({ locale, namespace: 'main' });
   
   return (
     <>
@@ -81,7 +82,7 @@ export default async function Home({
           className="text-4xl md:text-6xl lg:text-7xl text-foreground tracking-wider"
           style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.2em' }}
         >
-          Kolekcije
+          {main('collectionsTitle')}
         </h2>
       </div>
 
