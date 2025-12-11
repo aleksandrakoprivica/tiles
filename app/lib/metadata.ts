@@ -26,7 +26,10 @@ export function generateMetadata({
 }: MetadataParams): Metadata {
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const url = `${siteUrl}${path}`;
-  const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
+  // Construct absolute URL for Open Graph images (required by most social platforms)
+  const imageUrl = image.startsWith('http') 
+    ? image 
+    : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
 
   // Extract path without locale for alternate language URLs
   const pathWithoutLocale = path.replace(/^\/[a-z]{2}/, '') || '/';
