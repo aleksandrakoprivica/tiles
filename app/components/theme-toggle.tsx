@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -23,7 +23,7 @@ export function ThemeToggle() {
   });
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Mark as mounted after initial render
     setMounted(true);
   }, []);
