@@ -14,6 +14,17 @@ export default async function MirrorPage({
   const t = await getTranslations({ locale, namespace: 'mirror' });
   const common = await getTranslations({ locale, namespace: 'common' });
 
+  const materialCards = [
+    {
+      title: t('material.title'),
+      copy: t('material.description'),
+    },
+    {
+      title: t('care.title'),
+      copy: t('care.description'),
+    },
+  ];
+
   const gallery = [
     { src: "/mirror0.png", alt: "Mirror table styled with books" },
     { src: "/mirror-7.jpeg", alt: "Mirror table corner detail" },
@@ -95,9 +106,34 @@ export default async function MirrorPage({
         </div>
       </section>
 
+      {/* Material Story */}
+      <section className="bg-[var(--color-grey)]/6 border-t border-b border-foreground/10">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14 grid md:grid-cols-2 gap-6">
+          {materialCards.map((card) => (
+            <div
+              key={card.title}
+              className="bg-background/70 border border-foreground/10 rounded-sm p-6 flex flex-col gap-3"
+            >
+              <p
+                className="text-xs uppercase tracking-[0.2em] text-foreground/50"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {card.title}
+              </p>
+              <p
+                className="text-base text-foreground/80 leading-relaxed"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {card.copy}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Gallery + Details */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 space-y-10 md:space-y-14">
-        <div className="grid md:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-5 gap-8 items-end">
           <div className="md:col-span-2 space-y-5">
             <p
               className="text-sm uppercase tracking-[0.2em] text-foreground/50"

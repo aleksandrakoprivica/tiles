@@ -74,7 +74,7 @@ export default async function ContactPage({
               className="text-xs uppercase tracking-[0.3em] text-foreground/50"
               style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
             >
-              Contact
+              {t('contact')}
             </p>
             <h1
               className="text-5xl md:text-7xl leading-tight"

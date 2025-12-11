@@ -83,6 +83,14 @@
     "descriptionSecond": "Bold yet elegant, Mirror Tables are designed to stand out without overpowering the space. Whether placed in modern interiors or used as a statement piece, they bring depth, brightness, and a sense of quiet luxury.",
     "whyMirror": "Why Mirror",
     "whyMirrorDescription": "Mirror Tables stand out as functional art. Each piece reflects light and space, creating a dynamic visual experience that transforms any room. Precision-laid mirrored tiles paired with clean, architectural forms make these tables both distinctive and adaptable to your vision.",
+    "material": {
+      "title": "Material",
+      "description": "Crafted from precision-cut mirrored tiles set into a durable composite base, creating a seamless reflective surface."
+    },
+    "care": {
+      "title": "Care",
+      "description": "Clean with a soft, lint-free cloth and glass cleaner. Avoid abrasive materials to maintain the mirror's clarity and shine."
+    },
     "features": {
       "lightAmplifying": {
         "title": "Light Amplifying Surface",
@@ -138,6 +146,7 @@
     "ctaButton": "Schedule a visit"
   },
   "contactPage": {
+    "contact": "Contact",
     "title": "Let’s build something custom.",
     "subtitle": "Share floor plans, rough sketches, or simple inspiration.",
     "methods": {
