@@ -57,6 +57,7 @@ export function generateMetadata({
           width: 1200,
           height: 630,
           alt: title || siteName,
+          type: 'image/png',
         },
       ],
       locale: locale === 'sr' ? 'sr_RS' : 'en_US',
@@ -73,6 +74,10 @@ export function generateMetadata({
           alt: title || siteName,
         },
       ],
+    },
+    other: {
+      'og:image:secure_url': imageUrl,
+      'og:image:type': 'image/png',
     },
     robots: {
       index: !noindex,
