@@ -17,8 +17,8 @@ export async function generateMetadata({
   return genMeta({
     title: locale === 'sr' ? 'Pločice po Vašoj meri' : 'Tile it your way',
     description: locale === 'sr'
-      ? 'Oživite svoju viziju jedinstvenim, prilagodljivim dizajnom pločica koji čini svaki prostor zaista vašim.'
-      : 'Bring your vision to life with unique, customizable tile designs that make every space truly yours.',
+      ? 'Tile it your way.'
+      : 'Tile it you way.',
     image: '/maintiles.png',
     path: `/${locale}`,
     locale,
@@ -73,7 +73,7 @@ export default async function Home({
         {/* Product Showcase */}
         <div className="flex-1 px-3 md:px-8 pb-6 -mt-2">
           {/* Product Image */}
-          <div className="relative aspect-[9/16] md:aspect-[16/9] bg-foreground/5 rounded-lg overflow-hidden w-full">
+          <div className="relative aspect-[9/16] md:aspect-[16/9] bg-none rounded-lg overflow-hidden w-full">
             {/* Mobile Image */}
             <Image
               src="/maintiles-mobile.png"
@@ -95,9 +95,17 @@ export default async function Home({
       </main>
     </div>
     {/* Photo Grid Section - Full Width */}
-    <section className="w-full max-w-full mt-6 md:mt-20 px-3 md:px-8 pb-6 md:pb-10 overflow-x-hidden">
+    <section 
+      className="mt-6 md:mt-20 pb-6 md:pb-10"
+      style={{
+        width: '100vw',
+        marginLeft: 'calc(50% - 50vw)',
+        marginRight: 'calc(50% - 50vw)',
+        maxWidth: '100vw'
+      }}
+    >
       {/* Collections title */}
-      <div className="mb-8 md:mb-12 text-center">
+      <div className="mb-8 md:mb-12 text-center px-3 md:px-8 max-w-7xl mx-auto">
         <h2
           className="text-4xl md:text-6xl lg:text-7xl text-foreground tracking-wider"
           style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.2em' }}
@@ -106,12 +114,13 @@ export default async function Home({
         </h2>
       </div>
 
-      {/* 3 Column Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 w-full max-w-full">
+      {/* 3 Column Grid - Edge to edge on mobile and desktop */}
+      <div className="w-full px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-0 w-full">
         {/* Column 1 - Mono */}
         <Link 
           href={`/${locale}/mono`} 
-          className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+          className="relative w-full aspect-[2/4] md:aspect-[3/4] overflow-hidden group cursor-pointer"
         >
           <Image
             src="/monogroup1.png"
@@ -121,7 +130,7 @@ export default async function Home({
             sizes="(min-width: 768px) 33vw, 100vw"
           />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h2 
+            <h2
               className="text-4xl md:text-5xl lg:text-6xl font-bold"
               style={{ fontFamily: 'var(--font-bebas-neue)', color: '#98866E' }}
             >
@@ -132,8 +141,8 @@ export default async function Home({
 
         {/* Column 2 - Mosaic */}
         <Link 
-          href={`/${locale}/mosaic`} 
-          className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+          href={`/${locale}/mosaic`}
+          className="relative w-full aspect-[2/4] md:aspect-[3/4] overflow-hidden group cursor-pointer"
         >
           <Image
             src="/mosaicc-group.png"
@@ -154,8 +163,8 @@ export default async function Home({
 
         {/* Column 3 - Mirror */}
         <Link 
-          href={`/${locale}/mirror`} 
-          className="relative w-full aspect-[3/4] overflow-hidden group cursor-pointer"
+          href={`/${locale}/mirror`}
+          className="relative w-full aspect-[2/4] md:aspect-[3/4] overflow-hidden group cursor-pointer"
         >
           <Image
             src="/mirror-group.png"
@@ -173,6 +182,7 @@ export default async function Home({
             </h2>
           </div>
         </Link>
+        </div>
       </div>
     </section>
     </>

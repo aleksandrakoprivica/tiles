@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslations, useLocale } from 'next-intl';
 import { locales } from '@/i18n';
 import { ThemeToggle } from './components/theme-toggle';
@@ -14,6 +15,55 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCollectionsOpen, setIsCollectionsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const collectionsButtonRef = useRef<HTMLButtonElement>(null);
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const updatePosition = () => {
+      if (isCollectionsOpen && collectionsButtonRef.current) {
+        const rect = collectionsButtonRef.current.getBoundingClientRect();
+        setDropdownPosition({
+          top: rect.bottom + 8,
+          left: rect.left,
+        });
+      }
+    };
+
+    if (isCollectionsOpen) {
+      updatePosition();
+      window.addEventListener('scroll', updatePosition, true);
+      window.addEventListener('resize', updatePosition);
+      return () => {
+        window.removeEventListener('scroll', updatePosition, true);
+        window.removeEventListener('resize', updatePosition);
+      };
+    }
+  }, [isCollectionsOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isCollectionsOpen &&
+        collectionsButtonRef.current &&
+        !collectionsButtonRef.current.contains(event.target as Node) &&
+        !(event.target as HTMLElement).closest('[data-dropdown]')
+      ) {
+        setIsCollectionsOpen(false);
+      }
+    };
+
+    if (isCollectionsOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }
+  }, [isCollectionsOpen]);
 
   const navItems = [
     {
@@ -31,9 +81,9 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-foreground/10 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto pl-3 pr-3 sm:pl-4 sm:pr-4 md:px-6 lg:px-8">
-        <div className="flex md:grid md:grid-cols-12 items-center md:gap-4 h-14 md:h-16">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-foreground/10 overflow-x-hidden overflow-y-visible">
+      <div className="max-w-7xl mx-auto pl-3 pr-3 sm:pl-4 sm:pr-4 md:px-6 lg:px-8 overflow-visible">
+        <div className="flex md:grid md:grid-cols-12 items-center md:gap-4 h-14 md:h-16 overflow-visible">
           {/* Logo */}
           <Link 
             href={`/${locale}`}
@@ -89,10 +139,10 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-0 justify-end items-center md:col-span-9 xl:col-span-10">
-            <ul className="items-center flex gap-6">
+          <nav className="hidden md:flex gap-0 justify-end items-center md:col-span-9 xl:col-span-10 overflow-visible">
+            <ul className="items-center flex gap-6 overflow-visible">
               {navItems.map((item, index) => (
-                <li key={item.href}>
+                <li key={item.href} className={index === 0 ? 'relative' : ''}>
                   <Link
                     href={item.href}
                     className={`font-semibold text-base transition-colors duration-200 uppercase ${
@@ -109,6 +159,7 @@ export function Header() {
                     <span className="relative inline-block ml-6 align-middle">
                       {/* Collections dropdown (desktop) */}
                       <button
+                        ref={collectionsButtonRef}
                         type="button"
                         onClick={() => setIsCollectionsOpen((open) => !open)}
                         className={`font-semibold text-base transition-colors duration-200 uppercase inline-flex items-center gap-1 ${
@@ -123,35 +174,6 @@ export function Header() {
                           {isCollectionsOpen ? '▲' : '▼'}
                         </span>
                       </button>
-
-                      {isCollectionsOpen && (
-                        <div className="absolute left-0 mt-2 w-40 rounded-sm border border-foreground/10 bg-background/95 shadow-lg py-2 z-50">
-                          <Link
-                            href={`/${locale}/mono`}
-                            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
-                            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
-                            onClick={() => setIsCollectionsOpen(false)}
-                          >
-                            {t('mono')}
-                          </Link>
-                          <Link
-                            href={`/${locale}/mosaic`}
-                            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
-                            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
-                            onClick={() => setIsCollectionsOpen(false)}
-                          >
-                            {t('mosaic')}
-                          </Link>
-                          <Link
-                            href={`/${locale}/mirror`}
-                            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
-                            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
-                            onClick={() => setIsCollectionsOpen(false)}
-                          >
-                            {t('mirror')}
-                          </Link>
-                        </div>
-                      )}
                     </span>
                   )}
                 </li>
@@ -284,6 +306,44 @@ export function Header() {
           </div>
         )}
       </div>
+      
+      {/* Collections Dropdown - Rendered via portal to body */}
+      {isCollectionsOpen && mounted && typeof document !== 'undefined' && createPortal(
+        <div 
+          data-dropdown
+          className="fixed w-40 rounded-sm border border-foreground/10 bg-background backdrop-blur-md shadow-xl py-2 z-[9999]"
+          style={{
+            top: `${dropdownPosition.top}px`,
+            left: `${dropdownPosition.left}px`,
+          }}
+        >
+          <Link
+            href={`/${locale}/mono`}
+            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
+            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+            onClick={() => setIsCollectionsOpen(false)}
+          >
+            {t('mono')}
+          </Link>
+          <Link
+            href={`/${locale}/mosaic`}
+            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
+            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+            onClick={() => setIsCollectionsOpen(false)}
+          >
+            {t('mosaic')}
+          </Link>
+          <Link
+            href={`/${locale}/mirror`}
+            className="block px-4 py-2 text-sm uppercase text-foreground/80 hover:bg-foreground/5"
+            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+            onClick={() => setIsCollectionsOpen(false)}
+          >
+            {t('mirror')}
+          </Link>
+        </div>,
+        document.body
+      )}
     </header>
   );
 }
