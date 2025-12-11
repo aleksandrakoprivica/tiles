@@ -26,7 +26,7 @@ export function generateMetadata({
 }: MetadataParams): Metadata {
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const url = `${siteUrl}${path}`;
-  const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
 
   // Extract path without locale for alternate language URLs
   const pathWithoutLocale = path.replace(/^\/[a-z]{2}/, '') || '/';
@@ -62,7 +62,14 @@ export function generateMetadata({
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [imageUrl],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: title || siteName,
+        },
+      ],
     },
     robots: {
       index: !noindex,
