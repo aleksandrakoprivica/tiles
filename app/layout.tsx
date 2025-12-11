@@ -56,10 +56,11 @@ export const metadata: Metadata = {
     description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
     images: [
       {
-        url: '/maintiles.png',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs'}/maintiles.png`,
         width: 1200,
         height: 630,
         alt: 'Tiles - Custom tile tables',
+        type: 'image/png',
       },
     ],
   },
@@ -67,7 +68,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tiles | Tile it your way',
     description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels.',
-    images: ['/maintiles.png'],
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs'}/maintiles.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Tiles - Custom tile tables',
+      },
+    ],
   },
   robots: {
     index: true,

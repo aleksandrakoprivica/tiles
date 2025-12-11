@@ -121,7 +121,7 @@ export default async function MosaicPage({
 
           <div className="md:flex-1 relative w-full aspect-[5/6] md:aspect-[3/4] rounded-sm overflow-hidden">
             <Image
-              src="/mosaic1.png"
+              src="/mosaic-10.jpeg"
               alt="Mosaic hero table"
               fill
               className="object-contain"

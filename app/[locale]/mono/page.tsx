@@ -121,7 +121,7 @@ export default async function MonoPage({
 
           <div className="md:flex-1 relative w-full aspect-[3/4] rounded-sm overflow-hidden">
             <Image
-              src="/mono-2.png"
+              src="/mono-10.jpeg"
               alt="Mono hero table"
               fill
               className="object-contain"

@@ -18,6 +18,7 @@ export async function generateMetadata({
     description: locale === 'sr' 
       ? 'Pločice po Vašoj meri. Ručno izrađeni stolovi od pločica, mermera i ogledala. Dizajn po meri za Vaš prostor.'
       : 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
+    image: '/maintiles.png',
     path: `/${locale}`,
     locale,
   });
