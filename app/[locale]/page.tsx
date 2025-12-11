@@ -1,9 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { generateMetadata as genMeta } from '../lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return genMeta({
+    title: locale === 'sr' ? 'Pločice po Vašoj meri' : 'Tile it your way',
+    description: locale === 'sr'
+      ? 'Oživite svoju viziju jedinstvenim, prilagodljivim dizajnom pločica koji čini svaki prostor zaista vašim.'
+      : 'Bring your vision to life with unique, customizable tile designs that make every space truly yours.',
+    image: '/maintiles.png',
+    path: `/${locale}`,
+    locale,
+  });
+}
 
 export default async function Home({
   params
@@ -18,7 +38,7 @@ export default async function Home({
   
   return (
     <>
-    <div className="flex min-h-screen bg-background">
+    <div className="flex min-h-screen bg-background overflow-x-hidden">
       {/* Left Sidebar */}
       <aside className="hidden lg:flex lg:w-1/3 xl:w-1/4 flex-col p-8 pt-20 border-r border-foreground/10">
         {/* Brand Tagline */}
@@ -75,9 +95,9 @@ export default async function Home({
       </main>
     </div>
     {/* Photo Grid Section - Full Width */}
-    <section className="w-full mt-6 md:mt-20 md:px-8 pb-6 md:pb-10">
+    <section className="w-full max-w-full mt-6 md:mt-20 px-3 md:px-8 pb-6 md:pb-10 overflow-x-hidden">
       {/* Collections title */}
-      <div className="mb-8 md:mb-12 text-center px-3 md:px-0">
+      <div className="mb-8 md:mb-12 text-center">
         <h2
           className="text-4xl md:text-6xl lg:text-7xl text-foreground tracking-wider"
           style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.2em' }}
@@ -87,7 +107,7 @@ export default async function Home({
       </div>
 
       {/* 3 Column Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 w-[calc(100%+6rem)] -mx-12 md:mx-0 md:w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-4 w-full max-w-full">
         {/* Column 1 - Mono */}
         <Link 
           href={`/${locale}/mono`} 

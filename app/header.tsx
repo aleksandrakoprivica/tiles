@@ -5,7 +5,8 @@ import { usePathname } from 'next/navigation';
 import Image from "next/image";
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { locales } from '../i18n';
+import { locales } from '@/i18n';
+import { ThemeToggle } from './components/theme-toggle';
 
 export function Header() {
   const t = useTranslations('common');
@@ -30,8 +31,8 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto pl-3 pr-0 sm:pl-4 sm:pr-0 md:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-foreground/10 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto pl-3 pr-3 sm:pl-4 sm:pr-4 md:px-6 lg:px-8">
         <div className="flex md:grid md:grid-cols-12 items-center md:gap-4 h-14 md:h-16">
           {/* Logo */}
           <Link 
@@ -156,8 +157,13 @@ export function Header() {
                 </li>
               ))}
 
+              {/* Theme Toggle */}
+              <li className="ml-4">
+                <ThemeToggle />
+              </li>
+
               {/* Language Switcher */}
-              <li className="flex gap-2 ml-4">
+              <li className="flex gap-2 ml-2">
                 {locales.map((loc) => (
                   <Link
                     key={loc}
@@ -180,14 +186,14 @@ export function Header() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-foreground/10 bg-background/98 backdrop-blur-md">
-            <nav className="px-4 py-3">
-              <ul className="flex flex-col gap-2">
+            <nav className="px-6 py-5">
+              <ul className="flex flex-col gap-3">
                 {/* First: home */}
-                <li className="border-b border-foreground/5">
+                <li className="border-b border-foreground/5 pb-3">
                   <Link
                     href={navItems[0].href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block py-2 text-xs tracking-[0.25em] uppercase transition-colors duration-200 ${
+                    className={`block py-3 text-xs tracking-[0.25em] uppercase transition-colors duration-200 ${
                       pathname === navItems[0].href ? 'text-foreground' : 'text-foreground/70 hover:text-foreground'
                     }`}
                     style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
@@ -198,18 +204,18 @@ export function Header() {
                 </li>
 
                 {/* Collections group (mobile) directly after home */}
-                <li className="pt-3 border-b border-foreground/5">
+                <li className="pt-3 pb-3 border-b border-foreground/5">
                   <p
-                    className="text-[11px] uppercase tracking-[0.3em] text-foreground/60 mb-2"
+                    className="text-[11px] uppercase tracking-[0.3em] text-foreground/60 mb-3"
                     style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                   >
                     {t('collections')}
                   </p>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-2 pl-1">
                     <Link
                       href={`/${locale}/mono`}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-xs uppercase text-foreground/80 py-1 tracking-[0.2em]"
+                      className="text-xs uppercase text-foreground/80 py-2 tracking-[0.2em]"
                       style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                     >
                       {t('mono')}
@@ -217,7 +223,7 @@ export function Header() {
                     <Link
                       href={`/${locale}/mosaic`}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-xs uppercase text-foreground/80 py-1 tracking-[0.2em]"
+                      className="text-xs uppercase text-foreground/80 py-2 tracking-[0.2em]"
                       style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                     >
                       {t('mosaic')}
@@ -225,7 +231,7 @@ export function Header() {
                     <Link
                       href={`/${locale}/mirror`}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-xs uppercase text-foreground/80 py-1 tracking-[0.2em]"
+                      className="text-xs uppercase text-foreground/80 py-2 tracking-[0.2em]"
                       style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
                     >
                       {t('mirror')}
@@ -237,12 +243,12 @@ export function Header() {
                 {navItems.slice(1).map((item) => (
                   <li
                     key={item.href}
-                    className="border-b border-foreground/5 last:border-b-0"
+                    className="border-b border-foreground/5 last:border-b-0 pb-3"
                   >
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block py-2 text-xs tracking-[0.25em] uppercase transition-colors duration-200 ${
+                      className={`block py-3 text-xs tracking-[0.25em] uppercase transition-colors duration-200 ${
                         pathname === item.href ? 'text-foreground' : 'text-foreground/70 hover:text-foreground'
                       }`}
                       style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
@@ -252,23 +258,26 @@ export function Header() {
                     </Link>
                   </li>
                 ))}
-                {/* Mobile Language Switcher */}
-                <li className="flex gap-2 pt-2 border-t border-foreground/10">
-                  {locales.map((loc) => (
-                    <Link
-                      key={loc}
-                      href={pathname.replace(`/${locale}`, `/${loc}`)}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={`text-sm uppercase px-3 py-2 rounded transition-colors ${
-                        locale === loc 
-                          ? 'text-foreground font-semibold bg-foreground/10' 
-                          : 'text-foreground/50 hover:text-foreground/70'
-                      }`}
-                      style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
-                    >
-                      {loc.toUpperCase()}
-                    </Link>
-                  ))}
+                {/* Mobile Theme Toggle and Language Switcher */}
+                <li className="flex items-center justify-between pt-4 pb-2 border-t border-foreground/10">
+                  <ThemeToggle />
+                  <div className="flex gap-2">
+                    {locales.map((loc) => (
+                      <Link
+                        key={loc}
+                        href={pathname.replace(`/${locale}`, `/${loc}`)}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`text-sm uppercase px-3 py-2 rounded transition-colors ${
+                          locale === loc 
+                            ? 'text-foreground font-semibold bg-foreground/10' 
+                            : 'text-foreground/50 hover:text-foreground/70'
+                        }`}
+                        style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                      >
+                        {loc.toUpperCase()}
+                      </Link>
+                    ))}
+                  </div>
                 </li>
               </ul>
             </nav>

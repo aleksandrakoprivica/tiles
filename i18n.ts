@@ -10,8 +10,8 @@ export default getRequestConfig(async ({ locale }) => {
     // Don't call notFound() here - let the layout handle it
     // This prevents the error from happening during request config
     return {
-      locale: 'en',
-      messages: (await import(`./messages/en.json`)).default
+      locale: 'sr',
+      messages: (await import(`./messages/sr.json`)).default
     };
   }
 

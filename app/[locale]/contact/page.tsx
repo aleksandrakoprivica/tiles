@@ -1,9 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from 'next';
+import { generateMetadata as genMeta } from '../../lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'contactPage' });
+  
+  return genMeta({
+    title: t('contact'),
+    description: t('subtitle'),
+    image: '/contact.png',
+    path: `/${locale}/contact`,
+    locale,
+  });
+}
 
 export default async function ContactPage({
   params
@@ -21,9 +40,9 @@ export default async function ContactPage({
       href: `mailto:${t('methods.emailValue')}`,
     },
     {
-      title: t('methods.phoneTitle'),
-      value: t('methods.phoneValue'),
-      href: `tel:${t('methods.phoneLink')}`,
+      title: t('methods.instagramTitle'),
+      value: t('methods.instagramValue'),
+      href: t('methods.instagramLink'),
     }
   ];
 
@@ -147,7 +166,7 @@ export default async function ContactPage({
         {/* Left: making photo (slightly smaller) */}
         <div className="relative w-full h-full min-h-[260px] md:min-h-[320px] overflow-hidden rounded-sm border border-foreground/10 bg-background">
           <Image
-            src="/MAKING.png"
+            src="/making.png"
             alt="Making tiles process"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 480px"

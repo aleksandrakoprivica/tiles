@@ -1,9 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from 'next';
+import { generateMetadata as genMeta } from '../../lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'mirror' });
+  
+  return genMeta({
+    title: t('title'),
+    description: t('description'),
+    image: '/mirror-group.png',
+    path: `/${locale}/mirror`,
+    locale,
+  });
+}
 
 export default async function MirrorPage({
   params

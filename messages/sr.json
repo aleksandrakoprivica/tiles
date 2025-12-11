@@ -78,7 +78,7 @@
   },
   "mirror": {
     "title": "Mirror Kolekcija",
-    "description": "Površina od ogledalo-pločica reflektuje okolinu, dodaje dubinu prostoru i menja se u zavisnosti od ugla, svetla i pokreta.",
+    "description": "Površina od ogledala reflektuje okolinu, dodaje dubinu prostoru i menja se u zavisnosti od ugla, svetla i pokreta.",
     "descriptionSecond": "Ovi stolovi nisu samo funkcionalni objekti, već vizuelni akcenti. Diskretno upečatljivi, lako se uklapaju u savremene enterijere i istovremeno ostavljaju snažan utisak.",
     "whyMirror": "Zašto Mirror",
     "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljene ogledalne pločice u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
@@ -111,11 +111,15 @@
   },
   "aboutPage": {
     "title": "O Nama",
-    "subtitle": "Mali smo posao iz Srbije koji pravi jedinstvene stolove od pločica, mermera i ogledala.",
+    "subtitle": "Tim iz Srbije koji pravi jedinstvene stolove od pločica, mermera i ogledala.",
     "descriptionSectionTitle": "",
     "descriptionSectionCopy": "",
     "familyStoryTitle": "Naša Priča",
-    "familyStoryCopy": "Sa sedištem u Srbiji, pravimo ručno izrađene stolove koristeći pločice, fragmente mermera i ogledala. Svaki komad se pravi sa pažnjom i posvećenošću detaljima, spajajući tradicionalnu zanatsku izradu i savremeni dizajn. Radimo direktno sa klijentima kako bismo napravili komade po meri koji se uklapaju u njihov prostor i stil. Naš proces počinje razumevanjem Vaše vizije—bilo da tražite akcentni komad za dnevni boravak ili onaj koji će upotpuniti prostor. Od početne konsultacije do finalne instalacije, tu smo na svakom koraku, vodeći računa da gotov komad prevazilazi Vaša očekivanja.",
+    "familyStoryCopy": [
+      "Sa sedištem u Srbiji, pravimo ručno izrađene stolove koristeći pločice, fragmente mermera i ogledala. Svaki komad se pravi sa pažnjom i posvećenošću detaljima, spajajući tradicionalnu zanatsku izradu i savremeni dizajn.",
+      "Radimo direktno sa klijentima kako bismo napravili komade po meri koji se uklapaju u njihov prostor i stil. Naš proces počinje razumevanjem Vaše vizije—bilo da tražite akcentni komad za dnevni boravak ili onaj koji će upotpuniti prostor.",
+      "Od početne konsultacije do finalne instalacije, tu smo na svakom koraku, vodeći računa da gotov komad prevazilazi Vaša očekivanja."
+    ],
     "principles": {
       "craftTitle": "Dizajn koji počinje materijalom",
       "craftCopy": "Polazimo od ploča, teraco fragmenata i ogledala kako bi materijal definisao proporciju, ton i detalj.",
@@ -143,10 +147,10 @@
     "subtitle": "Pošaljite plan, skicu ili bilo kakvu inspiraciju.",
     "methods": {
       "emailTitle": "Email",
-      "emailValue": "studio@tiles.studio",
-      "phoneTitle": "Telefon / WhatsApp",
-      "phoneValue": "+381 64 123 456",
-      "phoneLink": "+38164123456"
+      "emailValue": "tileityourway@gmail.com",
+      "instagramTitle": "Instagram",
+      "instagramValue": "@madeoftiles",
+      "instagramLink": "https://www.instagram.com/madeoftiles/"
     },
 
     "timelineTitle": "Kako funkcioniše",

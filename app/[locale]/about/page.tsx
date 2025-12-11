@@ -1,9 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from 'next';
+import { generateMetadata as genMeta } from '../../lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'aboutPage' });
+  
+  return genMeta({
+    title: t('title'),
+    description: t('subtitle'),
+    image: '/stacked.png',
+    path: `/${locale}/about`,
+    locale,
+  });
+}
 
 export default async function AboutPage({
   params
@@ -73,12 +92,17 @@ export default async function AboutPage({
               >
                 {t('familyStoryTitle')}
               </p>
-              <p
-                className="text-base md:text-lg text-foreground/80 leading-relaxed flex-grow"
-                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
-              >
-                {t('familyStoryCopy')}
-              </p>
+              <div className="flex-grow space-y-4">
+                {(t.raw('familyStoryCopy') as string[]).map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-base md:text-lg text-foreground/80 leading-relaxed"
+                    style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
 
             <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10 bg-foreground/5">
