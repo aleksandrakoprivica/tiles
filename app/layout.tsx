@@ -29,9 +29,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs'),
-  title: {
-    default: 'Tiles | Tile it your way',
-  },
+  title: 'Tiles | Tile it your way',
   description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
   keywords: ['tiles', 'custom tables', 'handcrafted furniture', 'marble tables', 'mirror tables', 'tile furniture', 'custom design'],
   authors: [{ name: 'Tiles' }],
