@@ -15,10 +15,11 @@ export async function generateMetadata({
   const { locale } = await params;
   
   return genMeta({
-    title: locale === 'sr' ? 'Pločice po Vašoj meri' : 'Tile it your way',
+    title: 'Tile it your way',
     description: locale === 'sr'
-      ? 'Tile it your way.'
-      : 'Tile it you way.',
+      ? 'Stvorimo komad po Vašoj viziji.'
+      : 'Let’s build something custom.',
+    keywords: ['club table', 'table', 'tiled table', 'tiles', 'mosaic table', 'mirror table', 'stolovi', 'nocni stocic', 'stolovi od plocica', 'ogledalo stolovi', 'mermer stolovi','coffee tables'],
     image: '/maintiles.png',
     path: `/${locale}`,
     locale,

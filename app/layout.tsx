@@ -47,36 +47,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    alternateLocale: ['sr_RS'],
-    siteName: 'Tiles',
-    title: 'Tiles | Tile it your way',
-    description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs'}/maintiles.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Tiles - Custom tile tables',
-        type: 'image/png',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Tiles | Tile it your way',
-    description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels.',
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs'}/maintiles.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Tiles - Custom tile tables',
-      },
-    ],
-  },
   robots: {
     index: true,
     follow: true,

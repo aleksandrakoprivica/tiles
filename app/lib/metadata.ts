@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs';
 const siteName = 'Tiles';
-const defaultDescription = 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.';
+const defaultDescription = 'Tile it your way. Custom designs for your space.';
 const defaultImage = '/maintiles.png';
 
 interface MetadataParams {
@@ -13,6 +13,7 @@ interface MetadataParams {
   locale?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  keywords?: string[];
 }
 
 export function generateMetadata({
@@ -23,6 +24,7 @@ export function generateMetadata({
   locale = 'sr',
   type = 'website',
   noindex = false,
+  keywords = ['tiles', 'custom tables', 'handcrafted furniture', 'marble tables', 'mirror tables', 'tile furniture', 'custom design'],
 }: MetadataParams): Metadata {
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const url = `${siteUrl}${path}`;
@@ -37,6 +39,10 @@ export function generateMetadata({
   return {
     title: fullTitle,
     description,
+    keywords,
+    authors: [{ name: siteName }],
+    creator: siteName,
+    publisher: siteName,
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: url,
