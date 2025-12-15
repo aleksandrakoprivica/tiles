@@ -82,19 +82,19 @@
     "description": "Površina od ogledala reflektuje okolinu, dodaje dubinu prostoru i menja se u zavisnosti od ugla, svetla i pokreta.",
     "descriptionSecond": "Ovi stolovi nisu samo funkcionalni objekti, već vizuelni akcenti. Diskretno upečatljivi, lako se uklapaju u savremene enterijere i istovremeno ostavljaju snažan utisak.",
     "whyMirror": "Zašto Mirror",
-    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljene ogledalne pločice u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
+    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljena ogledala u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
     "material": {
       "title": "Materijal",
-      "description": "Izrađeno od precizno sečenih ogledalnih pločica postavljenih u izdržljivu kompozitnu osnovu, stvarajući besprekornu refleksivnu površinu."
+      "description": "Izrađeno od precizno sečenih ogledala postavljenih u izdržljivu kompozitnu osnovu, stvarajući besprekornu refleksivnu površinu."
     },
     "care": {
       "title": "Nega",
-      "description": "Čistite mekom, bez vlakana krpom i sredstvom za staklo. Izbegavajte abrazivne materijale kako biste zadržali jasnoću i sjaj ogledala."
+      "description": "Čistite mekom krpom i sredstvom za staklo. Izbegavajte abrazivne materijale kako biste zadržali jasnoću i sjaj ogledala."
     },
     "features": {
       "lightAmplifying": {
         "title": "Igra svetla i prostora",
-        "description": "Ogledalo-pločice reflektuju svetlo i vizuelno otvaraju prostor."
+        "description": "Ogledala reflektuju svetlo i vizuelno otvaraju prostor."
       },
       "distinctiveCharacter": {
         "title": "Upečatljiv, ali nenametljiv dizajn",
