@@ -12,7 +12,8 @@
   "main": {
     "exploreCollection": "Explore Collection",
     "clickToExplore": "Click to explore",
-    "collectionsTitle": "Collections"
+    "collectionsTitle": "Collections",
+    "tagline": "Bring your vision to life with unique, customizable tile designs that make every space truly yours."
   },
   "mono": {
     "title": "Mono Collection",

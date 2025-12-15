@@ -48,7 +48,8 @@ export default async function Home({
             Tile it your way.
           </p>
           <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            Bring your vision to life with unique, customizable tile designs that make every space truly yours.          </p>
+            {main('tagline')}
+          </p>
         </div>
 
 
@@ -62,7 +63,7 @@ export default async function Home({
             Tile it your way.
           </p>
           <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            Bring your vision to life with unique, customizable tile designs that make every space truly yours.
+            {main('tagline')}
           </p>
         </div>
 
