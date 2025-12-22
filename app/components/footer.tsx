@@ -114,12 +114,43 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 md:mt-12 pt-8 border-t border-foreground/10">
-          <p 
-            className="text-center text-foreground/40 text-xs"
-            style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
-          >
-            © {new Date().getFullYear()} Tiles. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center gap-2 md:flex-row md:justify-between">
+            <div 
+              className="flex items-center gap-2 text-foreground/50 text-xs"
+              style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+            >
+              <svg
+                className="w-3.5 h-3.5 text-foreground/60"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2.75C8.96 2.75 6.5 5.21 6.5 8.25C6.5 11.79 10.05 15.86 11.64 17.57C11.84 17.79 12.16 17.79 12.36 17.57C13.95 15.86 17.5 11.79 17.5 8.25C17.5 5.21 15.04 2.75 12 2.75Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 10.25C12.9665 10.25 13.75 9.4665 13.75 8.5C13.75 7.5335 12.9665 6.75 12 6.75C11.0335 6.75 10.25 7.5335 10.25 8.5C10.25 9.4665 11.0335 10.25 12 10.25Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span>Novi Sad, Srbija</span>
+            </div>
+
+            <p 
+              className="text-center md:text-right text-foreground/40 text-xs"
+              style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+            >
+              © {new Date().getFullYear()} Tiles. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

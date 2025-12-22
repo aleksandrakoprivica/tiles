@@ -35,9 +35,7 @@ export default async function MonoPage({
   const common = await getTranslations({ locale, namespace: 'common' });
   
   const specs = [
-    { label: t('specs.finish'), value: t('specs.finishValue') },
     { label: t('specs.leadTime'), value: t('specs.leadTimeValue') },
-    { label: t('specs.sizes'), value: t('specs.sizesValue') },
     { label: t('specs.use'), value: t('specs.useValue') },
   ];
 
