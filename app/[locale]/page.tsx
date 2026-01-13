@@ -136,7 +136,7 @@ export default async function Home({
               className="text-4xl md:text-5xl lg:text-6xl font-bold"
               style={{ fontFamily: 'var(--font-bebas-neue)', color: '#98866E' }}
             >
-              {mono('title')}
+              {main('learnMore')}
             </h2>
           </div>
         </Link>
@@ -158,7 +158,7 @@ export default async function Home({
               className="text-4xl md:text-5xl lg:text-6xl font-bold"
               style={{ fontFamily: 'var(--font-bebas-neue)', color: '#7A6104' }}
             >
-              {mosaic('title')}
+              {main('learnMore')}
             </h2>
           </div>
         </Link>
@@ -180,7 +180,7 @@ export default async function Home({
               className="text-4xl md:text-5xl lg:text-6xl font-bold"
               style={{ fontFamily: 'var(--font-bebas-neue)', color: '#5B5A55' }}
             >
-              {mirror('title')}
+              {main('learnMore')}
             </h2>
           </div>
         </Link>
