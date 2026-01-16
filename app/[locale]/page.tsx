@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { generateMetadata as genMeta } from '../lib/metadata';
+import { CollectionCard } from '../components/collection-card';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
@@ -48,8 +49,7 @@ export default async function Home({
             Tile it your way.
           </p>
           <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            {main('tagline')}
-          </p>
+            Bring your vision to life with unique, customizable tile designs that make every space truly yours.          </p>
         </div>
 
 
@@ -63,7 +63,7 @@ export default async function Home({
             Tile it your way.
           </p>
           <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            {main('tagline')}
+            Bring your vision to life with unique, customizable tile designs that make every space truly yours.
           </p>
         </div>
 
@@ -120,70 +120,34 @@ export default async function Home({
       <div className="w-full px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-0 w-full">
         {/* Column 1 - Mono */}
-        <Link 
-          href={`/${locale}/mono`} 
-          className="relative w-full aspect-[2/4] md:aspect-[3/4] overflow-hidden group cursor-pointer"
-        >
-          <Image
-            src="/monogroup1.png"
-            alt="Mono tile group"
-            fill
-            className="object-contain group-hover:opacity-50 transition-opacity duration-300"
-            sizes="(min-width: 768px) 33vw, 100vw"
-          />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h2
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#98866E' }}
-            >
-              {main('learnMore')}
-            </h2>
-          </div>
-        </Link>
+        <CollectionCard
+          href={`/${locale}/mono`}
+          imageSrc="/monogroup1.png"
+          imageAlt="Mono tile group"
+          title={mono('title')}
+          learnMoreText={main('learnMore')}
+          color="#98866E"
+        />
 
         {/* Column 2 - Mosaic */}
-        <Link 
+        <CollectionCard
           href={`/${locale}/mosaic`}
-          className="relative w-full aspect-[2/4] md:aspect-[3/4] overflow-hidden group cursor-pointer"
-        >
-          <Image
-            src="/mosaicc-group.png"
-            alt="Mosaic tile group"
-            fill
-            className="object-contain group-hover:opacity-50 transition-opacity duration-300"
-            sizes="(min-width: 768px) 33vw, 100vw"
-          />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#7A6104' }}
-            >
-              {main('learnMore')}
-            </h2>
-          </div>
-        </Link>
+          imageSrc="/mosaicc-group.png"
+          imageAlt="Mosaic tile group"
+          title={mosaic('title')}
+          learnMoreText={main('learnMore')}
+          color="#7A6104"
+        />
 
         {/* Column 3 - Mirror */}
-        <Link 
+        <CollectionCard
           href={`/${locale}/mirror`}
-          className="relative w-full aspect-[2/4] md:aspect-[3/4] overflow-hidden group cursor-pointer"
-        >
-          <Image
-            src="/mirror-group.png"
-            alt="Mirror tile group"
-            fill
-            className="object-contain group-hover:opacity-50 transition-opacity duration-300"
-            sizes="(min-width: 768px) 33vw, 100vw"
-          />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              style={{ fontFamily: 'var(--font-bebas-neue)', color: '#5B5A55' }}
-            >
-              {main('learnMore')}
-            </h2>
-          </div>
-        </Link>
+          imageSrc="/mirror-group.png"
+          imageAlt="Mirror tile group"
+          title={mirror('title')}
+          learnMoreText={main('learnMore')}
+          color="#5B5A55"
+        />
         </div>
       </div>
     </section>

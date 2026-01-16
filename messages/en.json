@@ -13,8 +13,7 @@
     "exploreCollection": "Explore Collection",
     "clickToExplore": "Click to explore",
     "collectionsTitle": "Collections",
-    "learnMore": "Learn more",
-    "tagline": "Bring your vision to life with unique, customizable tile designs that make every space truly yours."
+    "learnMore": "Learn More"
   },
   "mono": {
     "title": "Mono Collection",
@@ -114,15 +113,14 @@
   },
   "aboutPage": {
     "title": "About Us",
-    "subtitle": "",
+    "subtitle": "We are a small business from Serbia, crafting unique tables from tiles, marble, and mirror panels.",
     "descriptionSectionTitle": "",
     "descriptionSectionCopy": "",
     "familyStoryTitle": "Our Story",
     "familyStoryCopy": [
-      "We create handcrafted tables using tiles, marble fragments, and mirror panels. Each piece is made with care and attention to detail, bringing together traditional craftsmanship and modern design.",
-      "Our process begins with understanding your vision—whether you're looking for a statement piece for your living room or a functional work surface for your office.",
-      "From initial consultation to final installation, we're with you every step of the way, making sure the finished piece exceeds your expectations.",
-      "We deliver tables throughout Serbia."
+      "Based in Serbia, we create handcrafted tables using tiles, marble fragments, and mirror panels. Each piece is made with care and attention to detail, bringing together traditional craftsmanship and modern design.",
+      "We work directly with our clients to create custom pieces that fit their space and style. Our process begins with understanding your vision—whether you're looking for a statement piece for your living room or a functional work surface for your office. We source quality materials locally and internationally, ensuring each table not only looks beautiful but stands the test of time.",
+      "From initial consultation to final installation, we're with you every step of the way, making sure the finished piece exceeds your expectations."
     ],
     "principles": {
       "craftTitle": "Material-first design",

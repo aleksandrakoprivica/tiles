@@ -7,10 +7,9 @@ export default createMiddleware({
 
   // Used when no locale matches
   defaultLocale: 'sr',
-
-  // Always prefix with a locale and ignore browser language preferences
-  localePrefix: 'always',
-  localeDetection: false
+  
+  // Always use default locale, ignore browser preferences
+  localePrefix: 'always'
 });
 
 export const config = {

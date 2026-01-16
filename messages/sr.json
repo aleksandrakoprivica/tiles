@@ -13,8 +13,7 @@
     "exploreCollection": "Istraži Kolekciju",
     "clickToExplore": "Klikni da istražiš",
     "collectionsTitle": "Kolekcije",
-    "learnMore": "Saznaj više",
-    "tagline": "Pretvorite ideje u stvarnost uz stolove koji su baš po Vašem ukusu."
+    "learnMore": "Saznaj više"
   },
   "mono": {
     "title": "Mono Kolekcija",
@@ -83,19 +82,19 @@
     "description": "Površina od ogledala reflektuje okolinu, dodaje dubinu prostoru i menja se u zavisnosti od ugla, svetla i pokreta.",
     "descriptionSecond": "Ovi stolovi nisu samo funkcionalni objekti, već vizuelni akcenti. Diskretno upečatljivi, lako se uklapaju u savremene enterijere i istovremeno ostavljaju snažan utisak.",
     "whyMirror": "Zašto Mirror",
-    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljena ogledala u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
+    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljene ogledalne pločice u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
     "material": {
       "title": "Materijal",
-      "description": "Izrađeno od precizno sečenih ogledala postavljenih u izdržljivu kompozitnu osnovu, stvarajući besprekornu refleksivnu površinu."
+      "description": "Izrađeno od precizno sečenih ogledalnih pločica postavljenih u izdržljivu kompozitnu osnovu, stvarajući besprekornu refleksivnu površinu."
     },
     "care": {
       "title": "Nega",
-      "description": "Čistite mekom krpom i sredstvom za staklo. Izbegavajte abrazivne materijale kako biste zadržali jasnoću i sjaj ogledala."
+      "description": "Čistite mekom, bez vlakana krpom i sredstvom za staklo. Izbegavajte abrazivne materijale kako biste zadržali jasnoću i sjaj ogledala."
     },
     "features": {
       "lightAmplifying": {
         "title": "Igra svetla i prostora",
-        "description": "Ogledala reflektuju svetlo i vizuelno otvaraju prostor."
+        "description": "Ogledalo-pločice reflektuju svetlo i vizuelno otvaraju prostor."
       },
       "distinctiveCharacter": {
         "title": "Upečatljiv, ali nenametljiv dizajn",
@@ -113,15 +112,14 @@
   },
   "aboutPage": {
     "title": "O Nama",
-    "subtitle": "",
+    "subtitle": "Tim iz Srbije koji pravi jedinstvene stolove od pločica, mermera i ogledala.",
     "descriptionSectionTitle": "",
     "descriptionSectionCopy": "",
     "familyStoryTitle": "Naša Priča",
     "familyStoryCopy": [
-      "Pravimo ručno izrađene stolove koristeći pločice, fragmente mermera i ogledala. Svaki komad se pravi sa pažnjom i posvećenošću detaljima, spajajući tradicionalnu zanatsku izradu i savremeni dizajn.",
-      "Naš proces počinje razumevanjem Vaše vizije—bilo da tražite akcentni komad za dnevni boravak ili onaj koji će upotpuniti prostor.",
-      "Od početne konsultacije do finalne instalacije, tu smo na svakom koraku, vodeći računa da gotov komad prevazilazi Vaša očekivanja.",
-      "Dostavljamo na teritoriji cele Srbije."
+      "Sa sedištem u Srbiji, pravimo ručno izrađene stolove koristeći pločice, fragmente mermera i ogledala. Svaki komad se pravi sa pažnjom i posvećenošću detaljima, spajajući tradicionalnu zanatsku izradu i savremeni dizajn.",
+      "Radimo direktno sa klijentima kako bismo napravili komade po meri koji se uklapaju u njihov prostor i stil. Naš proces počinje razumevanjem Vaše vizije—bilo da tražite akcentni komad za dnevni boravak ili onaj koji će upotpuniti prostor.",
+      "Od početne konsultacije do finalne instalacije, tu smo na svakom koraku, vodeći računa da gotov komad prevazilazi Vaša očekivanja."
     ],
     "principles": {
       "craftTitle": "Dizajn koji počinje materijalom",
@@ -162,8 +160,8 @@
       "callCopy": "Razgovaramo o tome kako bi sto trebalo da izgleda i kako će funkcionisati u vašem prostoru.",
       "prototypeTitle": "Izrada",
       "prototypeCopy": "Pravimo prototip, biramo materijale i dogovaramo se oko svakog detalja.",
-      "deliveryTitle": "Dostava",
-      "deliveryCopy": "Dostavljamo gotov sto na teritoriji cele Srbije, postavljamo ga na mesto i podešavamo da bude savršeno."
+      "deliveryTitle": "Montaža",
+      "deliveryCopy": "Dostavljamo gotov sto, postavljamo ga na mesto i podešavamo da bude savršeno."
     },
     "ctaTitle": "Spremni?",
     "ctaCopy": "Pošaljite nam poruku sa nekoliko slika ili skica — javićemo se sa daljim koracima.",

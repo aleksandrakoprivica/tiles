@@ -24,39 +24,6 @@ export function Header() {
       setMounted(true);
     });
   }, []);
-  
-  // Disable page scroll when mobile menu is open (mobile only)
-  useEffect(() => {
-    if (!mounted || typeof document === 'undefined' || typeof window === 'undefined') return;
-
-    const html = document.documentElement;
-    const body = document.body;
-
-    if (isMobileMenuOpen) {
-      const scrollBarCompensation = window.innerWidth - html.clientWidth;
-
-      html.style.overflow = 'hidden';
-      body.style.overflow = 'hidden';
-
-      // Avoid layout shift when hiding scrollbar
-      if (scrollBarCompensation > 0) {
-        html.style.paddingRight = `${scrollBarCompensation}px`;
-        body.style.paddingRight = `${scrollBarCompensation}px`;
-      }
-    } else {
-      html.style.overflow = '';
-      body.style.overflow = '';
-      html.style.paddingRight = '';
-      body.style.paddingRight = '';
-    }
-
-    return () => {
-      html.style.overflow = '';
-      body.style.overflow = '';
-      html.style.paddingRight = '';
-      body.style.paddingRight = '';
-    };
-  }, [isMobileMenuOpen, mounted]);
 
   useEffect(() => {
     const updatePosition = () => {
@@ -297,10 +264,10 @@ export function Header() {
                 </li>
                 
                 {/* Remaining nav items: about, contact */}
-                {navItems.slice(1).map((item, index, array) => (
+                {navItems.slice(1).map((item) => (
                   <li
                     key={item.href}
-                    className={`${index < array.length - 1 ? 'border-b border-foreground/5' : ''} pb-3`}
+                    className="border-b border-foreground/5 last:border-b-0 pb-3"
                   >
                     <Link
                       href={item.href}
