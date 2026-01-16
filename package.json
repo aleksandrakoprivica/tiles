@@ -12,6 +12,7 @@
     "@heroui/button": "^2.2.27",
     "@heroui/system": "^2.4.23",
     "@heroui/theme": "^2.4.23",
+    "@vercel/analytics": "^1.6.1",
     "framer-motion": "^12.23.24",
     "next": "^15.2.6",
     "next-intl": "^4.5.3",
