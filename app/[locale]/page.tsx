@@ -46,10 +46,11 @@ export default async function Home({
         {/* Brand Tagline */}
         <div className="mb-8">
           <p className="italic text-foreground/70 text-lg mb-4" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            Tile it your way.
+            {main('tagline')}
           </p>
           <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            Bring your vision to life with unique, customizable tile designs that make every space truly yours.          </p>
+            {main('description')}
+          </p>
         </div>
 
 
@@ -60,10 +61,10 @@ export default async function Home({
         {/* Mobile Brand Tagline - Visible on mobile, hidden on desktop */}
         <div className="lg:hidden px-3 pt-14 pb-4">
           <p className="italic text-foreground/70 text-lg mb-4" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            Tile it your way.
+            {main('tagline')}
           </p>
           <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>
-            Bring your vision to life with unique, customizable tile designs that make every space truly yours.
+            {main('description')}
           </p>
         </div>
 

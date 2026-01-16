@@ -9,7 +9,10 @@ export default createMiddleware({
   defaultLocale: 'sr',
   
   // Always use default locale, ignore browser preferences
-  localePrefix: 'always'
+  localePrefix: 'always',
+  
+  // Disable automatic locale detection to always use Serbian as default
+  localeDetection: false
 });
 
 export const config = {
