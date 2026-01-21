@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tiles.rs';
 const siteName = 'Tiles';
 const defaultDescription = 'Tile it your way. Custom designs for your space.';
-const defaultImage = '/maintiles-mobile.png';
+const defaultImage = '/maintiles.png';
 
 interface MetadataParams {
   title?: string;
@@ -33,6 +33,14 @@ export function generateMetadata({
     ? image 
     : `${siteUrl}${image.startsWith('/') ? image : `/${image}`}`;
 
+  // Detect image type and dimensions based on filename
+  const isJpeg = image.toLowerCase().endsWith('.jpg') || image.toLowerCase().endsWith('.jpeg');
+  const isOgImage = image.includes('og-image');
+  const imageType = isJpeg ? 'image/jpeg' : 'image/png';
+  // Use optimized dimensions for og-image (1200x630), otherwise use original (2320x1280)
+  const imageWidth = isOgImage ? 1200 : 2320;
+  const imageHeight = isOgImage ? 630 : 1280;
+
   // Extract path without locale for alternate language URLs
   const pathWithoutLocale = path.replace(/^\/[a-z]{2}/, '') || '/';
   
@@ -61,10 +69,10 @@ export function generateMetadata({
       images: [
         {
           url: imageUrl,
-          width: 2320,
-          height: 1280,
+          width: imageWidth,
+          height: imageHeight,
           alt: title || siteName,
-          type: 'image/png',
+          type: imageType,
         },
       ],
     },
@@ -75,8 +83,8 @@ export function generateMetadata({
       images: [
         {
           url: imageUrl,
-          width: 2320,
-          height: 1280,
+          width: imageWidth,
+          height: imageHeight,
           alt: title || siteName,
         },
       ],
@@ -85,9 +93,9 @@ export function generateMetadata({
       'og:image': imageUrl,
       'og:image:url': imageUrl,
       'og:image:secure_url': imageUrl,
-      'og:image:type': 'image/png',
-      'og:image:width': '2320',
-      'og:image:height': '1280',
+      'og:image:type': imageType,
+      'og:image:width': String(imageWidth),
+      'og:image:height': String(imageHeight),
     },
     robots: {
       index: !noindex,

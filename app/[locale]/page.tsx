@@ -19,9 +19,9 @@ export async function generateMetadata({
     title: 'Tile it your way',
     description: locale === 'sr'
       ? 'Dizajnirano po Vašoj meri.'
-      : 'Let’s build something custom.',
+      : "Let's build something custom.",
     keywords: ['club table', 'table', 'tiled table', 'tiles', 'mosaic table', 'mirror table', 'stolovi', 'nocni stocic', 'stolovi od plocica', 'ogledalo stolovi', 'mermer stolovi','coffee tables'],
-    image: '/maintiles.png',
+    image: '/og-image.jpg',
     path: `/${locale}`,
     locale,
   });
