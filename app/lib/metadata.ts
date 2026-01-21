@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tiles.rs';
 const siteName = 'Tiles';
 const defaultDescription = 'Tile it your way. Custom designs for your space.';
-const defaultImage = '/maintiles.png';
+const defaultImage = '/maintiles-mobile.png';
 
 interface MetadataParams {
   title?: string;
@@ -57,6 +57,7 @@ export function generateMetadata({
       description,
       url,
       siteName,
+      locale: locale === 'sr' ? 'sr_RS' : 'en_US',
       images: [
         {
           url: imageUrl,
@@ -66,7 +67,6 @@ export function generateMetadata({
           type: 'image/png',
         },
       ],
-      locale: locale === 'sr' ? 'sr_RS' : 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
