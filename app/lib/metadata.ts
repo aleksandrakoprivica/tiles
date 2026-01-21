@@ -60,8 +60,8 @@ export function generateMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          width: 2320,
+          height: 1280,
           alt: title || siteName,
           type: 'image/png',
         },
@@ -75,8 +75,8 @@ export function generateMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          width: 2320,
+          height: 1280,
           alt: title || siteName,
         },
       ],
@@ -86,8 +86,8 @@ export function generateMetadata({
       'og:image:url': imageUrl,
       'og:image:secure_url': imageUrl,
       'og:image:type': 'image/png',
-      'og:image:width': '1200',
-      'og:image:height': '630',
+      'og:image:width': '2320',
+      'og:image:height': '1280',
     },
     robots: {
       index: !noindex,

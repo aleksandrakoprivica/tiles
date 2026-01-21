@@ -64,8 +64,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteUrl}/maintiles.png`,
-        width: 1200,
-        height: 630,
+        width: 2320,
+        height: 1280,
         alt: 'Tiles - Custom tile tables',
         type: 'image/png',
       },
@@ -78,8 +78,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteUrl}/maintiles.png`,
-        width: 1200,
-        height: 630,
+        width: 2320,
+        height: 1280,
         alt: 'Tiles - Custom tile tables',
       },
     ],
