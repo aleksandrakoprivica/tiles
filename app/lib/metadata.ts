@@ -82,8 +82,12 @@ export function generateMetadata({
       ],
     },
     other: {
+      'og:image': imageUrl,
+      'og:image:url': imageUrl,
       'og:image:secure_url': imageUrl,
       'og:image:type': 'image/png',
+      'og:image:width': '1200',
+      'og:image:height': '630',
     },
     robots: {
       index: !noindex,
