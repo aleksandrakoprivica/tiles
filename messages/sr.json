@@ -10,8 +10,6 @@
     "backHome": "Nazad na početnu"
   },
   "main": {
-    "exploreCollection": "Istraži Kolekciju",
-    "clickToExplore": "Klikni da istražiš",
     "collectionsTitle": "Kolekcije",
     "learnMore": "Saznaj više",
     "tagline": "Tile it your way.",
@@ -23,25 +21,14 @@
     "whyMono": "Zašto Mono",
     "whyMonoDescription": "Vaš MONO sto postaje fokus koji definiše ulaz, dnevni boravak ili radni kutak. Zemljani tonovi smiruju prostor, a verzije u boji daju mu novo raspoloženje — od blagih naglasaka do dramatičnih, galerijskih efekata.",
     "specs": {
-      "finish": "Završna obrada",
-      "finishValue": "Mat/Visoki sjaj",
       "leadTime": "Rok isporuke",
       "leadTimeValue": "4-6 nedelja",
-      "sizes": "Veličine",
-      "sizesValue": "60cm - 140cm",
       "use": "Upotreba",
-      "useValue": "Enterijer / Eksterijer",
-      "palette": "Paleta",
-      "paletteValue": "Mermer, Terazzo, Travertin"
-
+      "useValue": "Enterijer / Eksterijer"
     },
     "material": {
       "title": "Materijal",
       "description": "Koristimo širok spektar pločica: keramičke, mermerne, teraco i kompozitne. Svaka nudi drugačiji karakter i taktilnost, pa se sto lako prilagođava stilu i atmosferi prostora."
-    },
-    "finish": {
-      "title": "Završna obrada",
-      "description": "Završna obrada može biti mat, polusjajna ili sjajna, u zavisnosti od materijala i željenog izgleda. Ivice su pažljivo oblikovane — bilo meko zaobljene ili precizno ravne — sa zaštitnim slojem koji štiti površinu od mrlja i zadržava prirodnu teksturu pločice."
     },
     "care": {
       "title": "Nega",
@@ -50,29 +37,18 @@
   },
   "mosaic": {
     "title": "Mosaic Kolekcija",
-    "series": "Mosaic Serija",
-    "description": "Kolekcija koja slavi ručnu izradu i detalj—svaki sto je napravljen od pažljivo postavljenih sitnih pločica. Ritmične šare, bogata tekstura i ručni karakter unose dubinu i toplinu u svaki prostor.",
-    "whyMosaic": "Zašto Mozaic",
-    "whyMosaicDescription": "Mozaic stolovi su funkcionalna umetnost. Na desetine pločica spajaju se u jedinstvene stolove koje privlače pažnju i donose umetničku energiju u prostor.",
+    "description": "Kolekcija koja donosi igru forme, teksture i boje. Sitne pločice se spajaju u jedinstvenu celinu, stvarajući površine koje privlače pogled i pozivaju na dodir. Svaki sto nosi svoj karakter i priču, pretvarajući funkcionalni komad u akcenat koji oplemenjuje prostor.",
+    "whyMosaic": "Zašto Mosaic",
+    "whyMosaicDescription": "Mosaic stolovi su funkcionalna umetnost. Na desetine pločica spajaju se u jedinstvene stolove koje privlače pažnju i donose umetničku energiju u prostor.",
     "specs": {
-      "finish": "Završna obrada",
-      "finishValue": "Mat ili Blagi Sjaj",
       "leadTime": "Rok izrade",
       "leadTimeValue": "4–6 nedelja",
-      "sizes": "Dimenzije",
-      "sizesValue": "60cm – 140cm",
       "use": "Upotreba",
-      "useValue": "Enterijer / Eksterijer",
-      "palette": "Paleta",
-      "paletteValue": "Neutralne boje, jarke boje, pločice sa efektima"
+      "useValue": "Enterijer / Eksterijer"
     },
     "material": {
       "title": "Materijal",
       "description": "Izrađeno od sitnih keramičkih ili kamenih pločica postavljenih u izdržljivu kompozitnu osnovu."
-    },
-    "finish": {
-      "title": "Završna obrada",
-      "description": "Blago zaobljene ivice i zaštitni sloj koji štiti od fleka i čuva prirodnu boju i detalje pločica."
     },
     "care": {
       "title": "Održavanje",
@@ -84,62 +60,31 @@
     "description": "Površina od ogledala reflektuje okolinu, dodaje dubinu prostoru i menja se u zavisnosti od ugla, svetla i pokreta.",
     "descriptionSecond": "Ovi stolovi nisu samo funkcionalni objekti, već vizuelni akcenti. Diskretno upečatljivi, lako se uklapaju u savremene enterijere i istovremeno ostavljaju snažan utisak.",
     "whyMirror": "Zašto Mirror",
-    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljene ogledalne pločice u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
+    "whyMirrorDescription": "Mirror stolovi se ističu kao funkcionalna umetnost. Svaki komad reflektuje svetlo i prostor, stvarajući dinamično vizuelno iskustvo koje transformiše svaku prostoriju. Precizno postavljena ogledala u kombinaciji sa čistim, arhitektonskim formama čine ove stolove prepoznatljivim i prilagodljivim Vašoj viziji.",
     "material": {
       "title": "Materijal",
-      "description": "Izrađeno od precizno sečenih ogledalnih pločica postavljenih u izdržljivu kompozitnu osnovu, stvarajući besprekornu refleksivnu površinu."
+      "description": "Izrađeno od precizno sečenih ogledala postavljenih u izdržljivu kompozitnu osnovu, stvarajući besprekornu refleksivnu površinu."
     },
     "care": {
       "title": "Nega",
       "description": "Čistite mekom, bez vlakana krpom i sredstvom za staklo. Izbegavajte abrazivne materijale kako biste zadržali jasnoću i sjaj ogledala."
     },
-    "features": {
-      "lightAmplifying": {
-        "title": "Igra svetla i prostora",
-        "description": "Ogledalo-pločice reflektuju svetlo i vizuelno otvaraju prostor."
-      },
-      "distinctiveCharacter": {
-        "title": "Upečatljiv, ali nenametljiv dizajn",
-        "description": "Stol koji privlači pažnju bez dominacije nad prostorom."
-      },
-      "modernCraftsmanship": {
-        "title": "Precizna izrada",
-        "description": "Pažljivo postavljene pločice i čista, jasna forma."
-      },
-      "customMade": {
-        "title": "Mogućnost prilagođavanja",
-        "description": "Svaki sto se izrađuje po meri — dimenzije i detalji po izboru."
-      }
+    "specs": {
+      "leadTime": "Rok izrade",
+      "leadTimeValue": "4-6 nedelja",
+      "use": "Upotreba",
+      "useValue": "Enterijer / Eksterijer"
     }
   },
   "aboutPage": {
     "title": "O Nama",
     "subtitle": "Tim iz Srbije koji pravi jedinstvene stolove od pločica, mermera i ogledala.",
-    "descriptionSectionTitle": "",
-    "descriptionSectionCopy": "",
     "familyStoryTitle": "Naša Priča",
     "familyStoryCopy": [
       "Sa sedištem u Srbiji, pravimo ručno izrađene stolove koristeći pločice, fragmente mermera i ogledala. Svaki komad se pravi sa pažnjom i posvećenošću detaljima, spajajući tradicionalnu zanatsku izradu i savremeni dizajn.",
-      "Radimo direktno sa klijentima kako bismo napravili komade po meri koji se uklapaju u njihov prostor i stil. Naš proces počinje razumevanjem Vaše vizije—bilo da tražite akcentni komad za dnevni boravak ili onaj koji će upotpuniti prostor.",
+      "Radimo direktno sa klijentima kako bismo napravili komade po meri koji se uklapaju u njihov prostor i stil. Naš proces počinje razumevanjem Vaše vizije, bilo da tražite akcentni komad za dnevni boravak ili onaj koji će upotpuniti prostor.",
       "Od početne konsultacije do finalne instalacije, tu smo na svakom koraku, vodeći računa da gotov komad prevazilazi Vaša očekivanja."
     ],
-    "principles": {
-      "craftTitle": "Dizajn koji počinje materijalom",
-      "craftCopy": "Polazimo od ploča, teraco fragmenata i ogledala kako bi materijal definisao proporciju, ton i detalj.",
-      "scaleTitle": "Skala koja se prilagođava",
-      "scaleCopy": "Svaki komad crtamo kao modularni sistem koji može da raste od jednog klub stola do velike lobby instalacije.",
-      "touchTitle": "Ljudski dodir",
-      "touchCopy": "Ivice se ručno bruse, spojevi se toniraju prema površini, a svaki sto dobija meki mat premaz."
-    },
-
-    "stats": {
-      "yearsLabel": "Godine oblikovanja nameštaja od pločica",
-      "yearsValue": "8+",
-      "clientsLabel": "Realizovanih projekata",
-      "clientsValue": "120+",
-      "citiesLabel": "Gradova u kojima smo instalirali",
-      "citiesValue": "14"
-    },
     "ctaTitle": "Želite da radimo zajedno?",
     "ctaCopy": "Kontaktirajte nas da pogledate materijale, vidite prototipe ili započnete komad po meri.",
     "ctaButton": "Kontaktirajte nas"
@@ -155,18 +100,17 @@
       "instagramValue": "@madeoftiles",
       "instagramLink": "https://www.instagram.com/madeoftiles/"
     },
-
     "timelineTitle": "Kako funkcioniše",
     "timelineSteps": {
       "callTitle": "Razgovor",
-      "callCopy": "Razgovaramo o tome kako bi sto trebalo da izgleda i kako će funkcionisati u vašem prostoru.",
+      "callCopy": "Razgovaramo o tome kako bi sto trebalo da izgleda i kako će funkcionisati u Vašem prostoru.",
       "prototypeTitle": "Izrada",
       "prototypeCopy": "Pravimo prototip, biramo materijale i dogovaramo se oko svakog detalja.",
       "deliveryTitle": "Montaža",
       "deliveryCopy": "Dostavljamo gotov sto, postavljamo ga na mesto i podešavamo da bude savršeno."
     },
     "ctaTitle": "Spremni?",
-    "ctaCopy": "Pošaljite nam poruku sa nekoliko slika ili skica — javićemo se sa daljim koracima.",
+    "ctaCopy": "Pošaljite nam poruku!",
     "ctaButton": "Kontaktirajte nas"
   },
   "footer": {
@@ -175,7 +119,5 @@
     "about": "O nama",
     "contact": "Kontakt",
     "collections": "Kolekcije"
-
   }
 }
-

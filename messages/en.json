@@ -10,8 +10,6 @@
     "backHome": "Back to home"
   },
   "main": {
-    "exploreCollection": "Explore Collection",
-    "clickToExplore": "Click to explore",
     "collectionsTitle": "Collections",
     "learnMore": "Learn More",
     "tagline": "Tile it your way.",
@@ -19,30 +17,18 @@
   },
   "mono": {
     "title": "Mono Collection",
-    "series": "Mono Series",
     "description": "Mono Collection brings pure minimalism through tables crafted from the big format tiles. Simple lines and calming textures create a piece that fits effortlessly into any space, while the hand-finished details add warmth and authenticity.",
     "whyMono": "Why Mono",
     "whyMonoDescription": "Designed for modular living—pair two together for a layered coffee table moment or let a single piece anchor an entryway. Neutral palettes keep the focus on texture and proportion.",
     "specs": {
-      "finish": "Finish",
-      "finishValue": "Matte + High Gloss",
       "leadTime": "Lead time",
       "leadTimeValue": "4-6 weeks",
-      "sizes": "Sizes",
-      "sizesValue": "60cm - 140cm",
       "use": "Use",
-      "useValue": "Indoor / Outdoor",
-      "palette": "Palette",
-      "paletteValue": "Marbel, Terazzo, Travertine "
-
+      "useValue": "Indoor / Outdoor"
     },
     "material": {
       "title": "Material",
       "description": "Hand-poured composite with marble fragments for a mineral feel that stays cool to the touch."
-    },
-    "finish": {
-      "title": "Finish",
-      "description": "Soft radius edges with a low-sheen sealant that resists stains without muting the speckled detail."
     },
     "care": {
       "title": "Care",
@@ -51,29 +37,18 @@
   },
   "mosaic": {
     "title": "Mosaic Collection",
-    "series": "Mosaic Series",
     "description": "A celebration of craft and detail—this collection features tables built from carefully arranged small tiles. Each piece showcases rhythmic patterns, rich texture, and a handcrafted look that brings depth and character to any space.",
     "whyMosaic": "Why Mosaic",
     "whyMosaicDescription": "Mosaic tables stand out as functional art. Dozens of individual tiles come together to form unique tables that catch the eye and bring artistic energy into any room.",
     "specs": {
-      "finish": "Finish",
-      "finishValue": "Matte or Soft Gloss",
       "leadTime": "Lead Time",
       "leadTimeValue": "4–6 weeks",
-      "sizes": "Sizes",
-      "sizesValue": "60cm – 140cm",
       "use": "Use",
-      "useValue": "Indoor / Outdoor",
-      "palette": "Palette",
-      "paletteValue": "Neutral colors, bright colors, tiles with effects"
+      "useValue": "Indoor / Outdoor"
     },
     "material": {
       "title": "Material",
       "description": "Crafted from small ceramic and stone tiles set into a durable composite base, offering a textured, mineral feel."
-    },
-    "finish": {
-      "title": "Finish",
-      "description": "Soft edges with a protective seal that resists stains while preserving tile color and detail."
     },
     "care": {
       "title": "Care",
@@ -94,67 +69,29 @@
       "title": "Care",
       "description": "Clean with a soft, lint-free cloth and glass cleaner. Avoid abrasive materials to maintain the mirror's clarity and shine."
     },
-    "features": {
-      "lightAmplifying": {
-        "title": "Light Amplifying Surface",
-        "description": "Mirrored tiles reflect natural and artificial light, making spaces feel brighter and more open."
-      },
-      "distinctiveCharacter": {
-        "title": "Distinctive Character",
-        "description": "Each table interacts uniquely with its surroundings, creating a dynamic and ever-changing look."
-      },
-      "modernCraftsmanship": {
-        "title": "Modern Craftsmanship",
-        "description": "Precision-laid mirrored tiles paired with a clean, architectural form."
-      },
-      "customMade": {
-        "title": "Custom Made",
-        "description": "Size, tile format, and layout can be tailored to your vision."
-      }
+    "specs": {
+      "leadTime": "Lead Time",
+      "leadTimeValue": "4–6 weeks",
+      "use": "Use",
+      "useValue": "Indoor / Outdoor"
     }
   },
   "aboutPage": {
     "title": "About Us",
     "subtitle": "We are a small business from Serbia, crafting unique tables from tiles, marble, and mirror panels.",
-    "descriptionSectionTitle": "",
-    "descriptionSectionCopy": "",
     "familyStoryTitle": "Our Story",
     "familyStoryCopy": [
       "Based in Serbia, we create handcrafted tables using tiles, marble fragments, and mirror panels. Each piece is made with care and attention to detail, bringing together traditional craftsmanship and modern design.",
       "We work directly with our clients to create custom pieces that fit their space and style. Our process begins with understanding your vision—whether you're looking for a statement piece for your living room or a functional work surface for your office. We source quality materials locally and internationally, ensuring each table not only looks beautiful but stands the test of time.",
       "From initial consultation to final installation, we're with you every step of the way, making sure the finished piece exceeds your expectations."
     ],
-    "principles": {
-      "craftTitle": "Material-first design",
-      "craftCopy": "We start with slabs, terrazzo fragments, and mirror panels to let the material dictate proportion, tone, and detail.",
-      "scaleTitle": "Scale that adapts",
-      "scaleCopy": "Every piece is drafted as a modular system so it can stretch from a single coffee table to a full lobby installation.",
-      "touchTitle": "Human touch",
-      "touchCopy": "Edges are sanded by hand, joints are tinted to match each surface, and every table is sealed with a soft-matte finish."
-    },
-    "process": {
-      "briefTitle": "Brief",
-      "briefCopy": "Share mood boards, floor plans, or color palettes. We translate them into rough geometry and finishes.",
-      "prototypeTitle": "Prototype",
-      "prototypeCopy": "We build foam-core mockups, test tile layouts, and send photo updates or arrange a visit to review in person.",
-      "installTitle": "Install",
-      "installCopy": "White-glove delivery, on-site leveling, and care notes so the piece ages beautifully."
-    },
-    "stats": {
-      "yearsLabel": "Years shaping tile furniture",
-      "yearsValue": "8+",
-      "clientsLabel": "Projects shipped",
-      "clientsValue": "120+",
-      "citiesLabel": "Cities installed",
-      "citiesValue": "14"
-    },
     "ctaTitle": "Want to work together?",
     "ctaCopy": "Get in touch to review materials, see prototypes, or start a custom commission.",
     "ctaButton": "Schedule a visit"
   },
   "contactPage": {
     "contact": "Contact",
-    "title": "Let’s build something custom.",
+    "title": "Let's build something custom.",
     "subtitle": "Share floor plans, rough sketches, or simple inspiration.",
     "methods": {
       "emailTitle": "Email",
@@ -162,14 +99,6 @@
       "instagramTitle": "Instagram",
       "instagramValue": "@madeoftiles",
       "instagramLink": "https://www.instagram.com/madeoftiles/"
-    },
-    "locationTitle": "Studio",
-    "locationCopy": "Bulevar despota Stefana 16, Belgrade — Worldwide shipping available.",
-    "formTitle": "What to include",
-    "formItems": {
-      "dimensions": "Dimensions or floor plan (PDF or screenshot).",
-      "materials": "Preferred materials, colors, or reference pieces.",
-      "timeline": "Ideal delivery date or event deadline."
     },
     "timelineTitle": "Project timeline",
     "timelineSteps": {
@@ -181,7 +110,7 @@
       "deliveryCopy": "We deliver and install the finished piece, level it in place, and let you enjoy its presence."
     },
     "ctaTitle": "Ready to start?",
-    "ctaCopy": "Email us a note with a few photos or sketches—we’ll reply with next steps.",
+    "ctaCopy": "Email us a note with a few photos or sketches—we'll reply with next steps.",
     "ctaButton": "Email the studio"
   },
   "footer": {
@@ -190,7 +119,5 @@
     "about": "About",
     "contact": "Contact",
     "collections": "Collections"
-
   }
 }
-
