@@ -28,8 +28,10 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: 'swap',
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tiles.rs';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs'),
+  metadataBase: new URL(siteUrl),
   title: 'Tiles | Tile it your way',
   description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
   keywords: ['tiles', 'custom tables', 'handcrafted furniture', 'marble tables', 'mirror tables', 'tile furniture', 'custom design'],
@@ -52,6 +54,35 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
+  },
+  openGraph: {
+    type: 'website',
+    title: 'Tiles | Tile it your way',
+    description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
+    url: siteUrl,
+    siteName: 'Tiles',
+    images: [
+      {
+        url: `${siteUrl}/maintiles.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Tiles - Custom tile tables',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tiles | Tile it your way',
+    description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
+    images: [
+      {
+        url: `${siteUrl}/maintiles.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Tiles - Custom tile tables',
+      },
+    ],
   },
 };
 

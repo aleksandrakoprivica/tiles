@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tiles.rs';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tiles.rs';
 const siteName = 'Tiles';
 const defaultDescription = 'Tile it your way. Custom designs for your space.';
 const defaultImage = '/maintiles.png';
