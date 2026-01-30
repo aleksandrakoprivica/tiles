@@ -189,7 +189,7 @@ export default async function MosaicPage({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
             <Image
-              src="/mosaic2.png"
+              src="/mosaicblue.jpeg"
               alt="Mosaic styling detail"
               fill
               className="object-cover"

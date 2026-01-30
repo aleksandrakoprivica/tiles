@@ -52,7 +52,7 @@ export default async function MirrorPage({
     { src: "/mirror0.png", alt: "Mirror table styled with books" },
     { src: "/mirror-7.jpeg", alt: "Mirror table corner detail" },
     { src: "/mirror-3.png", alt: "Mirror table reflection" },
-    { src: "/mirror-4.png", alt: "Mirror tables set" },
+    { src: "/mirrorcorner.png", alt: "Mirror tables set" },
     { src: "/mirror-5.jpeg", alt: "Mirror table detail" },
   ];
 
