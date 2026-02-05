@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Tiles | Tile it your way',
   description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
-  keywords: ['tiles', 'custom tables', 'handcrafted furniture', 'marble tables', 'mirror tables', 'tile furniture', 'custom design'],
+  keywords: ['tiles', 'custom tables', 'handcrafted furniture', 'marble tables', 'mirror tables', 'tile furniture', 'custom design', 'club table', 'table', 'tiled table', 'tiles', 'mosaic table', 'mirror table', 'stolovi', 'nocni stocic', 'stolovi od plocica', 'ogledalo stolovi', 'mermer stolovi','coffee tables', 'rucno radjeni stolovi', 'stolovi plocice', 'stolovi mermer', 'mermerni stolovi', 'stolovi od ogledala', 'stolovi ogledalo', 'stolovi plocice u boji','stolovi male plocice'],
   authors: [{ name: 'Tiles' }],
   creator: 'Tiles',
   publisher: 'Tiles',
