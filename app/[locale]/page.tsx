@@ -123,7 +123,7 @@ export default async function Home({
         {/* Column 1 - Mono */}
         <CollectionCard
           href={`/${locale}/mono`}
-          imageSrc="/monogroup1.png"
+          imageSrc="/monocollection.jpg"
           imageAlt="Mono tile group"
           title={mono('title')}
           learnMoreText={main('learnMore')}
@@ -133,21 +133,21 @@ export default async function Home({
         {/* Column 2 - Mosaic */}
         <CollectionCard
           href={`/${locale}/mosaic`}
-          imageSrc="/mosaicc-group.png"
+          imageSrc="/mosaiccollection.jpg"
           imageAlt="Mosaic tile group"
           title={mosaic('title')}
           learnMoreText={main('learnMore')}
-          color="#7A6104"
+          color="#E4B976"
         />
 
         {/* Column 3 - Mirror */}
         <CollectionCard
           href={`/${locale}/mirror`}
-          imageSrc="/mirror-group.png"
+          imageSrc="/mirrorcollection.jpg"
           imageAlt="Mirror tile group"
           title={mirror('title')}
           learnMoreText={main('learnMore')}
-          color="#5B5A55"
+          color="#7E7F80"
         />
         </div>
       </div>

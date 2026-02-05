@@ -18,7 +18,7 @@ export async function generateMetadata({
   return genMeta({
     title: t('title'),
     description: t('description'),
-    image: '/monogroup1.png',
+    image: '/monocollection.jpg',
     path: `/${locale}/mono`,
     locale,
   });
@@ -94,7 +94,7 @@ export default async function MonoPage({
                 {t('title')}
               </h1>
               <p
-                className="text-base md:text-lg text-foreground/70"
+                className="text-base md:text-lg text-foreground/70 whitespace-pre-line"
                 style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
               >
                 {t('description')}

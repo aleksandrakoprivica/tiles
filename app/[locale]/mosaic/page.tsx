@@ -18,7 +18,7 @@ export async function generateMetadata({
   return genMeta({
     title: t('title'),
     description: t('description'),
-    image: '/mosaicc-group.png',
+    image: '/mosaiccollection.jpg',
     path: `/${locale}/mosaic`,
     locale,
   });
@@ -94,7 +94,7 @@ export default async function MosaicPage({
                 {t('title')}
               </h1>
               <p
-                className="text-base md:text-lg text-foreground/70"
+                className="text-base md:text-lg text-foreground/70 whitespace-pre-line"
                 style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
               >
                 {t('description')}

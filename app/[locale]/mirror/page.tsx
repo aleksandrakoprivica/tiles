@@ -18,7 +18,7 @@ export async function generateMetadata({
   return genMeta({
     title: t('title'),
     description: t('description'),
-    image: '/mirror-group.png',
+    image: '/mirrorcollection.jpg',
     path: `/${locale}/mirror`,
     locale,
   });
@@ -49,7 +49,6 @@ export default async function MirrorPage({
   ];
 
   const gallery = [
-    { src: "/mirror0.png", alt: "Mirror table styled with books" },
     { src: "/mirror-7.jpeg", alt: "Mirror table corner detail" },
     { src: "/mirror-3.png", alt: "Mirror table reflection" },
     { src: "/mirrorcorner.png", alt: "Mirror tables set" },
@@ -101,13 +100,13 @@ export default async function MirrorPage({
               </h1>
               <div className="space-y-6">
                 <p
-                  className="text-base md:text-lg text-foreground/70 leading-relaxed"
+                  className="text-base md:text-lg text-foreground/70 leading-relaxed whitespace-pre-line"
                   style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
                 >
                   {t('description')}
                 </p>
                 <p
-                  className="text-base md:text-lg text-foreground/70 leading-relaxed"
+                  className="text-base md:text-lg text-foreground/70 leading-relaxed whitespace-pre-line"
                   style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
                 >
                   {t('descriptionSecond')}
