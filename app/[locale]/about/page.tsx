@@ -107,7 +107,7 @@ export default async function AboutPage({
 
             <div className="relative w-full aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10 bg-foreground/5">
               <Image
-                src="/stacked.png"
+                src="/stackedtables.jpeg"
                 alt="Stacked tile tables"
                 fill
                 className="object-cover"
