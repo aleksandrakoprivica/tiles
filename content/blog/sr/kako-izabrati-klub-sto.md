@@ -18,7 +18,7 @@ Zamislite ugaonu garnituru u manjoj dnevnoj sobi. U takvom prostoru, veliki, glo
 
 - Ostavlja dovoljno prostora za slobodno kretanje oko sofe.
 - Lakše se uklapa i uz manje i uz veće garniture, pa ne morate da brinete da li je „prevelik" ili „premali".
-- Vizuelno ne opterećuje prostor, što je posebno važno u stanovima i manjim dnevnim sobama.
+- Vizuelno ne opterećuje prostor, što je vrlo važno u stanovima i manjim dnevnim sobama.
 - Lakše se premešta i prilagođava rasporedu, ako menjate enterijer ili nameštaj.
 
 Ako imate veću sofu i veliku dnevnu sobu, umesto jednog ogromnog stola, bolje rešenje je kombinacija manjeg klub stola i pomoćnog stočića — dobijate više fleksibilnosti, a prostor i dalje deluje prozračno.
