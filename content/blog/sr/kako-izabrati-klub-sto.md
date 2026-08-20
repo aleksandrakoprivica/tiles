@@ -38,7 +38,7 @@ Upravo iz tog razloga, u TILESu fokusirani smo na čiste, pravougaone i kvadratn
 
 Na tržištu postoji nekoliko uobičajenih izbora za izradu klub stola, i svaki ima svoje prednosti:
 
-- **Drvo** je klasičan, siguran izbor — topao je i uklapa se u tradicionalne i skandinavske enterijere, iako vremenom može da izgubi sjaj ili zahteva održavanje.
+- **Drvo** je klasičan, siguran izbor. Stvara topao ambijent je i uklapa se u tradicionalne i skandinavske enterijere, iako vremenom može da izgubi sjaj ili zahteva održavanje.
 - **Staklo** deluje lako i prozračno, dobro rešenje za manje prostore, ali lako pokazuje otiske prstiju i mrlje, pa zahteva češće čišćenje.
 - **Mermer** deluje luksuzno, ali je osetljiv na kiseline i fleke, pa traži pažljivo održavanje.
 - **Keramika**, s druge strane, spaja sve prednosti bez glavnih mana. Donosi teksturu, toplinu i jedinstven, ručno rađen karakter, a pritom je izuzetno otporna na fleke, ogrebotine i svakodnevnu upotrebu.
@@ -77,4 +77,4 @@ Stolovi od keramike kombinuju estetiku i praktičnost, otporni su na svakodnevnu
 
 Drvo i staklo su solidni, uobičajeni izbori, ali kada je u pitanju kombinacija izdržljivosti, jedinstvenog karaktera i lakog održavanja, ručno rađena keramika i pločice jednostavno nemaju konkurenciju. Kompaktan, jednostavan pravougaoni ili kvadratni oblik i autentična tekstura čine kombinaciju koja se uklapa u gotovo svaki prostor i svaki stil. Umesto da tragate za savršenim kompromisom, izaberite sto koji je napravljen da se prilagodi Vašem domu.
 
-Pogledajte TILES kolekcije — [Mono](/sr/mono), [Mosaic](/sr/mosaic) i [Mirror](/sr/mirror). Hajde da napravimo komad koji je baš za Vaš prostor. Pišite nam na [kontakt](/sr/contact).
+Pogledajte TILES kolekcije [Mono](/sr/mono), [Mosaic](/sr/mosaic) i [Mirror](/sr/mirror). Hajde da napravimo komad koji je baš za Vaš prostor. Pišite nam na [kontakt](/sr/contact).
