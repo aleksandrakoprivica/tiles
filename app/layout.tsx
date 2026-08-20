@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     siteName: 'Tiles',
     images: [
       {
-        url: `${siteUrl}/maintiles.png`,
+        url: `${siteUrl}/maintilesnew.jpg`,
         width: 2320,
         height: 1280,
         alt: 'Tiles - Custom tile tables',
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     description: 'Tile it your way. Handcrafted tables from tiles, marble, and mirror panels. Custom designs for your space.',
     images: [
       {
-        url: `${siteUrl}/maintiles.png`,
+        url: `${siteUrl}/maintilesnew.jpg`,
         width: 2320,
         height: 1280,
         alt: 'Tiles - Custom tile tables',

@@ -4,6 +4,9 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { generateMetadata as genMeta } from '../lib/metadata';
 import { CollectionCard } from '../components/collection-card';
+import { BlogCard } from '../components/blog-card';
+import { getBlogPosts } from '../lib/blog';
+import type { Locale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
@@ -16,11 +19,13 @@ export async function generateMetadata({
   const { locale } = await params;
   
   return genMeta({
-    title: 'Tile it your way',
+    title: locale === 'sr'
+      ? 'Klub sto, noćni stočić i stolovi od keramike'
+      : 'Coffee tables, nightstands and ceramic tile tables',
     description: locale === 'sr'
-      ? 'Dizajnirano po Vašoj meri.'
-      : "Let's build something custom.",
-    keywords: ['club table', 'table', 'tiled table', 'tiles', 'mosaic table', 'mirror table', 'stolovi', 'nocni stocic', 'stolovi od plocica', 'ogledalo stolovi', 'mermer stolovi','coffee tables'],
+      ? 'Ručno rađeni klub sto za dnevnu sobu, noćni stočić i pomoćni sto. Stolovi od keramike i pločica po meri — TILES Novi Sad.'
+      : 'Handmade coffee tables, nightstands and side tables in ceramic tile. Custom TILES tables from Novi Sad.',
+    keywords: ['club table', 'table', 'tiled table', 'tiles', 'mosaic table', 'mirror table', 'stolovi', 'nocni stocic', 'stolovi od plocica', 'ogledalo stolovi', 'mermer stolovi','coffee tables', 'klub sto', 'klub sto za dnevnu sobu', 'stolovi od keramike'],
     image: '/og-image.jpg',
     path: `/${locale}`,
     locale,
@@ -37,10 +42,13 @@ export default async function Home({
   const mosaic = await getTranslations({ locale, namespace: 'mosaic' });
   const mirror = await getTranslations({ locale, namespace: 'mirror' });
   const main = await getTranslations({ locale, namespace: 'main' });
+  const loc = locale as Locale;
+  const posts = getBlogPosts(loc);
+
   
   return (
     <>
-    <div className="flex min-h-screen bg-background overflow-x-hidden">
+    <div className="flex bg-background overflow-x-hidden">
       {/* Left Sidebar */}
       <aside className="hidden lg:flex lg:w-1/3 xl:w-1/4 flex-col p-8 pt-20 border-r border-foreground/10">
         {/* Brand Tagline */}
@@ -68,35 +76,56 @@ export default async function Home({
           </p>
         </div>
 
-        {/* Spacer / top offset for hero image */}
-        <div className="pt-10 md:pt-20 px-3 md:px-8 pb-1">
-
-        </div>
-
         {/* Product Showcase */}
-        <div className="flex-1 px-3 md:px-8 pb-6 -mt-2">
-          {/* Product Image */}
-          <div className="relative aspect-[9/16] md:aspect-[16/9] bg-none rounded-lg overflow-hidden w-full">
-            {/* Mobile Image */}
-            <Image
-              src="/maintiles-mobile.png"
-              alt="main"
-              fill
-              className="object-contain md:object-cover rounded-lg md:hidden"
-              priority
-            />
-            {/* Desktop Image */}
-            <Image
-              src="/maintiles.png"
-              alt="main"
-              fill
-              className="object-cover rounded-lg hidden md:block"
-              priority
-            />
+        <div className="px-3 md:px-8 pt-6 md:pt-12 pb-6">
+          <div className="w-full max-w-7xl mx-auto bg-white p-2 md:p-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
+              {[
+                {
+                  src: '/maintilesnew.jpg',
+                  alt: 'klub sto dnevna soba',
+                },
+                {
+                  src: '/hero-klub-sto.png',
+                  alt: 'klub sto dnevna soba',
+                },
+                {
+                  src: '/hero-mosaic-sto.png',
+                  alt: 'klub sto dnevna soba',
+                },
+              ].map((image) => (
+                <div
+                  key={image.src}
+                  className="relative w-full h-[52vh] md:h-[64vh] overflow-hidden bg-white"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-contain object-bottom"
+                    priority
+                    sizes="(min-width: 768px) 30vw, 100vw"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
     </div>
+    <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 space-y-8">
+      <h2
+        className="text-4xl md:text-6xl lg:text-7xl text-center tracking-wider"
+        style={{ fontFamily: 'var(--font-bebas-neue)', letterSpacing: '0.12em' }}
+      >
+        {main('guidesTitle')}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {posts.map((post) => (
+          <BlogCard key={post.slug} href={`/${loc}/blog/${post.slug}`} post={post} />
+        ))}
+      </div>
+    </section>
     {/* Photo Grid Section - Full Width */}
     <section 
       className="mt-6 md:mt-20 pb-6 md:pb-10"
@@ -124,7 +153,7 @@ export default async function Home({
         <CollectionCard
           href={`/${locale}/mono`}
           imageSrc="/monocollection.jpg"
-          imageAlt="Mono tile group"
+          imageAlt="Mono klub sto od keramičkih pločica"
           title={mono('title')}
           learnMoreText={main('learnMore')}
           color="#98866E"
@@ -134,7 +163,7 @@ export default async function Home({
         <CollectionCard
           href={`/${locale}/mosaic`}
           imageSrc="/mosaiccollection.jpg"
-          imageAlt="Mosaic tile group"
+          imageAlt="Mosaic sto od keramike sa sitnim pločicama"
           title={mosaic('title')}
           learnMoreText={main('learnMore')}
           color="#E4B976"
@@ -144,7 +173,7 @@ export default async function Home({
         <CollectionCard
           href={`/${locale}/mirror`}
           imageSrc="/mirrorcollection.jpg"
-          imageAlt="Mirror tile group"
+          imageAlt="Mirror sto sa ogledalom — klub sto ili noćni stočić"
           title={mirror('title')}
           learnMoreText={main('learnMore')}
           color="#7E7F80"

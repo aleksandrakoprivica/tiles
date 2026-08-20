@@ -119,8 +119,8 @@ export default async function MonoPage({
 
           <div className="md:flex-1 relative w-full aspect-[3/4] rounded-sm overflow-hidden">
             <Image
-              src="/mono-10.jpeg"
-              alt="Mono hero table"
+              src="/mono-hero.png"
+              alt="Mono klub sto od keramike"
               fill
               className="object-contain"
               priority
@@ -176,10 +176,10 @@ export default async function MonoPage({
           <div className="md:col-span-3">
             <div className="relative w-full aspect-[6/3] rounded-sm overflow-hidden border border-foreground/10">
               <Image
-                src="/mono-1.png"
-                alt="Mono styling 1"
+                src="/mono-gallery-1.png"
+                alt="Mono stočić od keramike"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_70%]"
                 sizes="(min-width: 768px) 60vw, 100vw"
               />
             </div>

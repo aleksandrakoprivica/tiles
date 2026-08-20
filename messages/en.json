@@ -3,6 +3,7 @@
     "home": "HOME",
     "about": "ABOUT",
     "contact": "CONTACT",
+    "blog": "BLOG",
     "collections": "Collections",
     "mono": "Mono",
     "mosaic": "Mosaic",
@@ -13,7 +14,20 @@
     "collectionsTitle": "Collections",
     "learnMore": "Learn More",
     "tagline": "Tile it your way.",
-    "description": "Bring your vision to life with unique, customizable tiled table designs that make every space truly yours."
+    "description": "Every piece is handmade from ceramic, shaped to your space and style.",
+    "guidesTitle": "Guides",
+    "byUseTitle": "By use"
+  },
+  "uses": {
+    "relatedCollections": "Collections for this use",
+    "guides": "Guides"
+  },
+  "blog": {
+    "indexTitle": "Guides",
+    "indexDescription": "How to choose a coffee table, nightstand and ceramic tile tables. TILES guides.",
+    "indexIntro": "Practical guides for coffee tables, nightstands and handmade ceramic tile tables.",
+    "backToBlog": "Back to blog",
+    "related": "Related"
   },
   "mono": {
     "title": "Mono Collection",
@@ -118,6 +132,7 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
+    "blog": "Blog",
     "collections": "Collections"
   }
 }

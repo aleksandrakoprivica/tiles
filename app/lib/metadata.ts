@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.tiles.rs';
 const siteName = 'Tiles';
 const defaultDescription = 'Tile it your way. Custom designs for your space.';
-const defaultImage = '/maintiles.png';
+const defaultImage = '/maintilesnew.jpg';
 
 interface MetadataParams {
   title?: string;
@@ -14,6 +14,10 @@ interface MetadataParams {
   type?: 'website' | 'article';
   noindex?: boolean;
   keywords?: string[];
+  languagePaths?: {
+    en: string;
+    sr: string;
+  };
 }
 
 export function generateMetadata({
@@ -25,6 +29,7 @@ export function generateMetadata({
   type = 'website',
   noindex = false,
   keywords = ['tiles', 'custom tables', 'handcrafted furniture', 'marble tables', 'mirror tables', 'tile furniture', 'custom design', 'club table', 'table', 'tiled table', 'tiles', 'mosaic table', 'mirror table', 'stolovi', 'nocni stocic', 'stolovi od plocica', 'ogledalo stolovi', 'mermer stolovi','coffee tables', 'rucno radjeni stolovi', 'stolovi plocice', 'stolovi mermer', 'mermerni stolovi', 'stolovi od ogledala', 'stolovi ogledalo', 'stolovi plocice u boji','stolovi male plocice'],
+  languagePaths,
 }: MetadataParams): Metadata {
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const url = `${siteUrl}${path}`;
@@ -43,6 +48,15 @@ export function generateMetadata({
 
   // Extract path without locale for alternate language URLs
   const pathWithoutLocale = path.replace(/^\/[a-z]{2}/, '') || '/';
+  const languageAlternates = languagePaths
+    ? {
+        en: `${siteUrl}${languagePaths.en}`,
+        sr: `${siteUrl}${languagePaths.sr}`,
+      }
+    : {
+        en: `${siteUrl}/en${pathWithoutLocale}`,
+        sr: `${siteUrl}/sr${pathWithoutLocale}`,
+      };
   
   return {
     title: fullTitle,
@@ -54,10 +68,7 @@ export function generateMetadata({
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: url,
-      languages: {
-        'en': `${siteUrl}/en${pathWithoutLocale}`,
-        'sr': `${siteUrl}/sr${pathWithoutLocale}`,
-      },
+      languages: languageAlternates,
     },
     openGraph: {
       type,

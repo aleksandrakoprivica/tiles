@@ -3,6 +3,7 @@
     "home": "POČETNA",
     "about": "O NAMA",
     "contact": "KONTAKT",
+    "blog": "BLOG",
     "collections": "KOLEKCIJE",
     "mono": "Mono",
     "mosaic": "Mosaic",
@@ -13,7 +14,20 @@
     "collectionsTitle": "Kolekcije",
     "learnMore": "Saznaj više",
     "tagline": "Tile it your way.",
-    "description": "Oživite svoju viziju jedinstvenim, prilagodljivim dizajnom koji svaki prostor čini potpuno Vašim."
+    "description": "Svaki komad ručno rađen od keramike, oblikovan po meri Vašeg prostora i stila.",
+    "guidesTitle": "Saveti i vodiči",
+    "byUseTitle": "Po nameni"
+  },
+  "uses": {
+    "relatedCollections": "Kolekcije za ovu namenu",
+    "guides": "Saveti i vodiči"
+  },
+  "blog": {
+    "indexTitle": "Saveti i vodiči",
+    "indexDescription": "Kako izabrati klub sto za dnevnu sobu, noćni stočić i stolove od keramike. Vodiči TILES.",
+    "indexIntro": "Praktični vodiči za klub sto, sto za dnevnu sobu, noćni stočić i stolove od keramike i pločica.",
+    "backToBlog": "Nazad na blog",
+    "related": "Povezano"
   },
   "mono": {
     "title": "Mono Kolekcija",
@@ -118,6 +132,7 @@
     "home": "Početna",
     "about": "O nama",
     "contact": "Kontakt",
+    "blog": "Blog",
     "collections": "Kolekcije"
   }
 }

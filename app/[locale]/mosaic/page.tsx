@@ -119,8 +119,8 @@ export default async function MosaicPage({
 
           <div className="md:flex-1 relative w-full aspect-[5/6] md:aspect-[3/4] rounded-sm overflow-hidden">
             <Image
-              src="/mosaic-10.jpeg"
-              alt="Mosaic hero table"
+              src="/mosaic-hero.png"
+              alt="Mosaic klub sto od keramike"
               fill
               className="object-contain"
               priority
@@ -198,10 +198,10 @@ export default async function MosaicPage({
           </div>
           <div className="relative aspect-[3/4] rounded-sm overflow-hidden border border-foreground/10">
             <Image
-              src="/mosaic4.png"
-              alt="Mosaic tabletop closeup"
+              src="/mosaic-checkered.png"
+              alt="Mosaic sto od keramike u plavo-belom dezenu"
               fill
-              className="object-cover"
+              className="object-cover object-[center_65%]"
               sizes="(min-width: 768px) 33vw, 100vw"
             />
           </div>

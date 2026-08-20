@@ -7,6 +7,7 @@ import { useState, useRef, useEffect, startTransition } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslations, useLocale } from 'next-intl';
 import { locales } from '@/i18n';
+import { switchLocalePath } from './lib/paths';
 import { ThemeToggle } from './components/theme-toggle';
 
 export function Header() {
@@ -191,7 +192,7 @@ export function Header() {
                 {locales.map((loc) => (
                   <Link
                     key={loc}
-                    href={pathname.replace(`/${locale}`, `/${loc}`)}
+                    href={switchLocalePath(pathname ?? `/${locale}`, locale, loc)}
                     className={`text-sm uppercase px-2 py-1 rounded transition-colors ${
                       locale === loc 
                         ? 'text-foreground font-semibold' 
@@ -289,7 +290,7 @@ export function Header() {
                     {locales.map((loc) => (
                       <Link
                         key={loc}
-                        href={pathname.replace(`/${locale}`, `/${loc}`)}
+                        href={switchLocalePath(pathname ?? `/${locale}`, locale, loc)}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`text-sm uppercase px-3 py-2 rounded transition-colors ${
                           locale === loc 
