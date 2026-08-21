@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { generateMetadata as genMeta } from '../lib/metadata';
 import { CollectionCard } from '../components/collection-card';
 import { BlogCard } from '../components/blog-card';
+import { InstagramCta } from '../components/instagram-cta';
 import { getBlogPosts } from '../lib/blog';
 import type { Locale } from '@/i18n';
 
@@ -113,6 +114,9 @@ export default async function Home({
         </div>
       </main>
     </div>
+
+    <InstagramCta />
+
     <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20 space-y-8">
       <h2
         className="text-4xl md:text-6xl lg:text-7xl text-center tracking-wider"
