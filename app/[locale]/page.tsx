@@ -78,7 +78,7 @@ export default async function Home({
 
         {/* Product Showcase */}
         <div className="px-3 md:px-8 pt-6 md:pt-12 pb-6">
-          <div className="w-full max-w-7xl mx-auto bg-white p-2 md:p-3">
+          <div className="w-full max-w-7xl mx-auto bg-background border border-foreground/10 p-2 md:p-3">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
               {[
                 {
@@ -96,7 +96,7 @@ export default async function Home({
               ].map((image) => (
                 <div
                   key={image.src}
-                  className="relative w-full h-[52vh] md:h-[64vh] overflow-hidden bg-white"
+                  className="relative w-full h-[52vh] md:h-[64vh] overflow-hidden bg-background"
                 >
                   <Image
                     src={image.src}

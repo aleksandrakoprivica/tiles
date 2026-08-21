@@ -69,6 +69,15 @@ export function Footer() {
                   {t('contact')}
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href={localizedHref('/blog')} 
+                  className="text-foreground/60 hover:text-foreground transition-colors text-sm"
+                  style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                >
+                  {t('blog')}
+                </Link>
+              </li>
             </ul>
           </div>
 

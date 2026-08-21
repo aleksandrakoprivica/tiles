@@ -125,7 +125,19 @@
     },
     "ctaTitle": "Spremni?",
     "ctaCopy": "Pošaljite nam poruku!",
-    "ctaButton": "Kontaktirajte nas"
+    "ctaButton": "Kontaktirajte nas",
+    "form": {
+      "title": "Pošaljite poruku",
+      "name": "Ime",
+      "email": "Email",
+      "phone": "Telefon (opciono)",
+      "message": "Poruka",
+      "messagePlaceholder": "Dimenzije, prostor, inspiracija…",
+      "submit": "Pošalji",
+      "sending": "Šaljem…",
+      "success": "Poruka je poslata. Javićemo se uskoro.",
+      "error": "Nešto nije uspelo. Pokušajte ponovo ili pišite na tileityourway@gmail.com."
+    }
   },
   "footer": {
     "navigation": "Navigacija",

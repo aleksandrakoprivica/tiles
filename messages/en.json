@@ -125,7 +125,19 @@
     },
     "ctaTitle": "Ready to start?",
     "ctaCopy": "Email us a note with a few photos or sketches—we'll reply with next steps.",
-    "ctaButton": "Email the studio"
+    "ctaButton": "Email the studio",
+    "form": {
+      "title": "Send a message",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "messagePlaceholder": "Sizes, space, inspiration…",
+      "submit": "Send",
+      "sending": "Sending…",
+      "success": "Message sent. We’ll get back to you soon.",
+      "error": "Something went wrong. Please try again or email tileityourway@gmail.com."
+    }
   },
   "footer": {
     "navigation": "Navigation",
