@@ -40,6 +40,11 @@ export default async function ContactPage({
       href: `mailto:${t('methods.emailValue')}`,
     },
     {
+      title: t('methods.phoneTitle'),
+      value: t('methods.phoneValue'),
+      href: t('methods.phoneLink'),
+    },
+    {
       title: t('methods.instagramTitle'),
       value: t('methods.instagramValue'),
       href: t('methods.instagramLink'),
@@ -116,8 +121,8 @@ export default async function ContactPage({
 
       {/* Contact methods - centered */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 pb-20 md:pb-28">
-        <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {methods.map((method) => (
               <div
                 key={method.title}

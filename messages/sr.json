@@ -111,6 +111,9 @@
     "methods": {
       "emailTitle": "Email",
       "emailValue": "tileityourway@gmail.com",
+      "phoneTitle": "Telefon",
+      "phoneValue": "069 544 5889",
+      "phoneLink": "tel:+381695445889",
       "instagramTitle": "Instagram",
       "instagramValue": "@madeoftiles",
       "instagramLink": "https://www.instagram.com/madeoftiles/"
