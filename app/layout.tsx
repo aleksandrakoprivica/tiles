@@ -5,7 +5,7 @@ import "./globals.css";
 import { Bebas_Neue, IBM_Plex_Mono } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/next";
 
-const GOOGLE_ADS_ID = "AW-18402372086";
+const GOOGLE_ADS_ID = "AW-18407800167";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

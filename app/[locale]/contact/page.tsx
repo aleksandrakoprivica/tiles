@@ -126,7 +126,7 @@ export default async function ContactPage({
             {methods.map((method) => (
               <div
                 key={method.title}
-                className="border border-foreground/10 rounded-sm p-5 bg-background/80 flex flex-col gap-2"
+                className="min-w-0 border border-foreground/10 rounded-sm p-5 bg-background/80 flex flex-col gap-2 overflow-hidden"
               >
                 <p
                   className="text-xs uppercase tracking-[0.3em] text-foreground/50"
@@ -137,14 +137,14 @@ export default async function ContactPage({
                 {method.href ? (
                   <a
                     href={method.href}
-                    className="text-lg md:text-xl hover:underline"
+                    className="text-base md:text-lg break-all hover:underline"
                     style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
                   >
                     {method.value}
                   </a>
                 ) : (
                   <p
-                    className="text-lg md:text-xl"
+                    className="text-base md:text-lg break-all"
                     style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
                   >
                     {method.value}
