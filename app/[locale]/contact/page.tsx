@@ -121,12 +121,12 @@ export default async function ContactPage({
 
       {/* Contact methods - centered */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 pb-20 md:pb-28">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {methods.map((method) => (
               <div
                 key={method.title}
-                className="min-w-0 border border-foreground/10 rounded-sm p-5 bg-background/80 flex flex-col gap-2 overflow-hidden"
+                className="min-w-0 border border-foreground/10 rounded-sm px-4 py-5 md:px-5 bg-background/80 flex flex-col gap-2"
               >
                 <p
                   className="text-xs uppercase tracking-[0.3em] text-foreground/50"
@@ -137,14 +137,14 @@ export default async function ContactPage({
                 {method.href ? (
                   <a
                     href={method.href}
-                    className="text-base md:text-lg break-all hover:underline"
+                    className="text-sm md:text-[15px] whitespace-nowrap hover:underline"
                     style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
                   >
                     {method.value}
                   </a>
                 ) : (
                   <p
-                    className="text-base md:text-lg break-all"
+                    className="text-sm md:text-[15px] whitespace-nowrap"
                     style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
                   >
                     {method.value}
