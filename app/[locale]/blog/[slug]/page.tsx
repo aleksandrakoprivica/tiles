@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       </header>
 
       <div
-        className="max-w-3xl mx-auto px-4 md:px-8 pb-20 space-y-4 [&_h2]:text-3xl [&_h2]:pt-6 [&_h2]:pb-2 [&_p]:text-foreground/80 [&_p]:leading-relaxed [&_a]:underline [&_a]:underline-offset-4 [&_ul]:list-disc [&_ul]:pl-5"
+        className="max-w-3xl mx-auto px-4 md:px-8 pb-20 space-y-4 [&_h2]:text-3xl [&_h2]:pt-6 [&_h2]:pb-2 [&_p]:text-foreground/80 [&_p]:leading-relaxed [&_a]:underline [&_a]:underline-offset-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 [&_img]:w-full [&_img]:my-8 [&_img]:border [&_img]:border-foreground/10"
         style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
       >
         <ReactMarkdown>{post.content}</ReactMarkdown>

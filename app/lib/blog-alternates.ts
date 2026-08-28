@@ -3,6 +3,8 @@ const BLOG_ALTERNATES: Record<string, string> = {
   'how-to-choose-a-coffee-table': 'kako-izabrati-klub-sto',
   'kako-izabrati-nocni-stocic': 'how-to-choose-a-nightstand',
   'how-to-choose-a-nightstand': 'kako-izabrati-nocni-stocic',
+  'keramicki-klub-stolovi': 'ceramic-coffee-tables',
+  'ceramic-coffee-tables': 'keramicki-klub-stolovi',
 };
 
 export function getBlogAlternateSlug(slug: string): string | null {
