@@ -5,7 +5,7 @@ slug: ceramic-coffee-tables
 alternateSlug: keramicki-klub-stolovi
 date: "2026-08-28"
 cover: /blog-keramicki-klub-sto.jpg
-coverAlt: Ceramic coffee table in a modern living room
+coverAlt: Ceramic coffee table with ceramic surface in a living room
 ---
 
 Tiles produces handmade coffee tables with ceramic surfaces in Serbia. The tables are made for modern living rooms and stand out for their durable, easy-to-maintain tops.

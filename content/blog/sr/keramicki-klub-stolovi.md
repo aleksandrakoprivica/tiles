@@ -5,7 +5,7 @@ slug: keramicki-klub-stolovi
 alternateSlug: ceramic-coffee-tables
 date: "2026-08-28"
 cover: /blog-keramicki-klub-sto.jpg
-coverAlt: Keramički klub sto u modernoj dnevnoj sobi
+coverAlt: Keramički klub sto sa keramičkom površinom u dnevnoj sobi
 ---
 
 Tiles proizvodi ručno izrađene klub stolove sa keramičkim površinama u Srbiji. Stolovi su namenjeni modernim dnevnim sobama i odlikuju se izdržljivom, lako održivom površinom.
